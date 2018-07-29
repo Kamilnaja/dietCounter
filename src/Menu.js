@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 class Menu extends Component {
     constructor(props) {
         super(props);
@@ -8,7 +9,7 @@ class Menu extends Component {
         return (
             <ul>
                 {
-                    this.props.data.map(item => <li>{item}</li>)
+                    this.props.data.map(item => <Link to={'/' + item}>{item}</Link>)
                 }
             </ul>
         );
