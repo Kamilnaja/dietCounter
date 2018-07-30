@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MealsList from './MealsList';
+import { Table } from 'react-bootstrap';
 
 class Meals extends Component {
     constructor(props) {
@@ -9,15 +10,27 @@ class Meals extends Component {
 
     render() {
         return (
-            <div>
-                {
-                    MealsList.map((item, idx) => <div key={idx}>
-                        {item.id}
-                        {item.name}
-                        {item.kcal}
-                    </div>
-                    )}
-            </div>
+            <Table striped bordered hover>
+                <thead>
+
+                </thead>
+                <tbody>
+                    {
+                        MealsList.map((item, idx) => <tr key={idx}>
+                            <td>
+                                {item.id}
+                            </td>
+                            <td>
+                                {item.name}
+                            </td>
+                            <td>
+                                {item.kcal}
+                            </td>
+                        </tr>
+                        )
+                    }
+                </tbody>
+            </Table>
         );
     }
 }

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { MenuItem, Nav, Navbar, NavDropdown, NavItem } from 'react-bootstrap';
-import MealsList from './MealsList';
-import MenuItems from './MenuItems';
+import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import MenuItems from './MenuItems';
 
 class AppMenu extends Component {
     constructor(props) {
         super(props);
         this.state = {}
     }
+
     render() {
         return (
             <Navbar>
@@ -33,4 +33,3 @@ class AppMenu extends Component {
 }
 
 export default AppMenu;
-

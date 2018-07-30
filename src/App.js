@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Navbar } from 'react-bootstrap';
 import { Route, Switch } from 'react-router-dom';
 import AppMenu from './AppMenu';
 import Diary from './Diary';
