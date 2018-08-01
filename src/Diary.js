@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Grid } from 'react-bootstrap';
 
 class Diary extends Component {
     constructor(props) {
@@ -9,10 +8,10 @@ class Diary extends Component {
 
     render() {
         return (
-            <Grid>
+            <di>
                 <h1>Diary</h1>
                 <h2>Please enter your today dishes</h2>
-            </Grid>
+            </di>
         );
     }
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Grid, Table } from 'react-bootstrap';
-import MealsModal from './MealsModal';
 import MealsList from './MealsList';
+import MealsModal from './MealsModal';
 import tableHeaders from './MealsTableHeaders';
 
 class Meals extends Component {
@@ -26,12 +25,12 @@ class Meals extends Component {
     render() {
 
         return (
-            <Grid>
+            <div>
                 {
-                    this.state.showModal &&
-                    <MealsModal hide={this.handleHide}></MealsModal>
+                    // this.state.showModal &&
+                    // <MealsModal hide={this.handleHide}></MealsModal>
                 }
-                <Table striped bordered hover>
+                <table>
                     <thead>
                         <tr>
                             {
@@ -55,11 +54,11 @@ class Meals extends Component {
                             )
                         }
                     </tbody>
-                </Table>
-                <Button onClick={this.handleShow.bind(this)}>
+                </table>
+                <button onClick={this.handleShow.bind(this)}>
                     Add next product/meal
-                </Button>
-            </Grid>
+                </button>
+            </div>
         );
     }
 }

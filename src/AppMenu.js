@@ -1,30 +1,25 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavItem } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 import MenuItems from './MenuItems';
+import { Link } from 'react-router-dom';
 
 class AppMenu extends Component {
-
     render() {
         return (
-            <Navbar>
-                <Navbar.Header>
-                    <Navbar.Brand>
-                        <a href="#home">React-Bootstrap</a>
-                    </Navbar.Brand>
-                </Navbar.Header>
-                <Nav>
+            <div className="wrapper">
+                <ul>
+
                     {
                         MenuItems.map((item, id) =>
-                            <LinkContainer to={item} key={id}>
-                                <NavItem key={id} >
+                            <li key={id}>
+                                <Link key={id} to={item}>
                                     {item}
-                                </NavItem>
-                            </LinkContainer>)
+                                </Link>
+                            </li>
+                        )
                     }
-                </Nav>
-            </Navbar>
-        )
+                </ul>
+            </div>
+        );
     }
 }
 
