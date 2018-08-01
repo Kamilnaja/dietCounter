@@ -4,6 +4,8 @@ import AppMenu from './AppMenu';
 import Diary from './Diary';
 import Info from './Info';
 import Meals from './Meals';
+// import bootstrap from 'bootstrap';
+
 
 class App extends Component {
   render() {

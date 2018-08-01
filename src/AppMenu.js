@@ -4,10 +4,6 @@ import { LinkContainer } from 'react-router-bootstrap';
 import MenuItems from './MenuItems';
 
 class AppMenu extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {}
-    }
 
     render() {
         return (
