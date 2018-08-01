@@ -6,9 +6,14 @@ import Info from './Info';
 import Meals from './Meals';
 
 class App extends Component {
+
+    onKeyPressed(e) {
+        console.log(e.key);
+    }
+
     render() {
         return (
-            <div className="wrapper">
+            <div className="wrapper" onKeyDown={(e) => this.onKeyPressed(e)}>
                 <AppMenu></AppMenu>
                 <Switch>
                     <Route path='/meals' component={Meals}></Route>

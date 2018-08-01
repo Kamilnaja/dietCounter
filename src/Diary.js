@@ -8,10 +8,10 @@ class Diary extends Component {
 
     render() {
         return (
-            <di>
+            <div>
                 <h1>Diary</h1>
                 <h2>Please enter your today dishes</h2>
-            </di>
+            </div>
         );
     }
 }
