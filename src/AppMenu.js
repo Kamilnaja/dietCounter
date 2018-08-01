@@ -11,9 +11,6 @@ class AppMenu extends Component {
         };
     }
 
-    handleKey(e) {
-        console.log(e);
-    }
 
     handleClick(id) {
         this.setState({
@@ -24,7 +21,7 @@ class AppMenu extends Component {
     render() {
         return (
             <div className="wrapper">
-                <ul className="menu" onKeyPress={(e) => { this.handleKey.bind(this); }}>
+                <ul className="menu">
                     {
                         MenuItems.map((item, id) =>
                             <SingleMenus
