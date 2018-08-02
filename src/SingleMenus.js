@@ -7,28 +7,25 @@ class SingleMenus extends Component {
     constructor(props) {
         super(props);
         this.state = {};
-        // this.className = 'menuImage';
-    }
-
-    componentWillReceiveProps() {
-        // if (this.props.selected === this.props.id) {
-        //     this.className += ' isSelected';
-        // }
     }
 
     render() {
 
         return (
-            <li className="menuTitle">
-                <Link to={this.props.item}>
+            <React.Fragment>
+                <Link
+                    to={this.props.item}
+                    className={this.props.selected === this.props.id ? 'menuTitle' : 'menuTitle hide'}>
                     {this.props.item}
                 </Link>
-                <div
-                    onClick={(id) => this.props.handleClick(id)}
-                    className={this.props.selected === this.props.id ? 'menuImage isSelected' : 'menuImage'}>
-                    {this.props.id}
-                </div>
-            </li>
+                <li>
+                    <div
+                        onClick={(id) => this.props.handleClick(id)}
+                        className={this.props.selected === this.props.id ? 'menuImage isSelected' : 'menuImage'}>
+                        {this.props.id}
+                    </div>
+                </li>
+            </React.Fragment>
         );
     }
 }
