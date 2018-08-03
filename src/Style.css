@@ -1,4 +1,9 @@
-.wrapper {
+ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.headerWrapper {
     border: 1px solid tan;
     padding: 10px 15px;
 }
@@ -20,11 +25,14 @@
 }
 
 .menuImage {
+    display: block;
     width: 100px;
     height: 100px;
     border: 2px dashed tan;
     text-align: center;
     line-height: 100px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .menuImage.isSelected {
@@ -33,4 +41,17 @@
 
 .hide {
     display: none;
+}
+
+.contentWrapper {
+    border: 2px solid black;
+    padding: 5px 10px;
+}
+
+.contentWrapper:empty {
+    display: none;
+}
+
+.weightInfo {
+    float: right;
 }

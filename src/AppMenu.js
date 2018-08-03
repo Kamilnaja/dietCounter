@@ -7,7 +7,7 @@ class AppMenu extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selected: 2
+            selected: 0
         };
     }
 
@@ -19,7 +19,16 @@ class AppMenu extends Component {
 
     render() {
         return (
-            <div className="wrapper">
+            <div className="headerWrapper">
+                <div className="weightInfo">
+                    <span>
+                        Twoja waga: 125kg
+                    </span>
+                </div>
+
+                {
+                    MenuItems.items[this.state.selected].name
+                }
                 <ul className="menu">
                     {
                         MenuItems.items.map((item, id) =>
@@ -27,7 +36,7 @@ class AppMenu extends Component {
                                 handleClick={this.handleClick.bind(this, id)}
                                 key={id}
                                 id={id}
-                                item={item.name}
+                                item={item}
                                 selected={this.state.selected}
                             ></SingleMenus>
                         )}

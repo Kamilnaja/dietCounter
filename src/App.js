@@ -7,19 +7,17 @@ import Meals from './Meals';
 
 class App extends Component {
 
-    onKeyPressed(e) {
-        console.log(e.key);
-    }
-
     render() {
         return (
-            <div className="wrapper" onKeyDown={(e) => this.onKeyPressed(e)}>
+            <div className="wrapper">
                 <AppMenu></AppMenu>
-                <Switch>
-                    <Route path='/meals' component={Meals}></Route>
-                    <Route path='/diary' component={Diary}></Route>
-                    <Route path='/info' component={Info}></Route>
-                </Switch>
+                <div className="contentWrapper">
+                    <Switch>
+                        <Route path='/meals' component={Meals}></Route>
+                        <Route path='/diary' component={Diary}></Route>
+                        <Route path='/info' component={Info}></Route>
+                    </Switch>
+                </div>
             </div>
         );
     }
