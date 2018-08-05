@@ -1,35 +1,32 @@
 import React, { Component } from 'react';
 import MealsList from './MealsList';
-import MealsModal from './MealsModal';
 import tableHeaders from './MealsTableHeaders';
+import MealsMenu from './Components/Main/MealsMenu';
 
 class Meals extends Component {
     constructor(props) {
         super(props);
-        this.state = { showModal: true }
-        this.handleHide = this.handleHide.bind(this)
+        this.state = { showModal: true };
+        this.handleHide = this.handleHide.bind(this);
     }
 
     handleShow() {
         this.setState({
             showModal: true
-        })
+        });
     }
 
     handleHide() {
         this.setState({
             showModal: false
-        })
+        });
     }
 
     render() {
 
         return (
-            <div>
-                {
-                    // this.state.showModal &&
-                    // <MealsModal hide={this.handleHide}></MealsModal>
-                }
+            <React.Fragment>
+                <MealsMenu></MealsMenu>
                 <table>
                     <thead>
                         <tr>
@@ -58,7 +55,7 @@ class Meals extends Component {
                 <button onClick={this.handleShow.bind(this)}>
                     Add next product/meal
                 </button>
-            </div>
+            </React.Fragment>
         );
     }
 }

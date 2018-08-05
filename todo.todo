@@ -1,6 +1,9 @@
 ☐ As a user, you can add next meal to list
 ☐ Add hamburger menu
 ☐ as a user, you can add category to list of categories
-
+☐ menu posiłki zagnieżdżone w dziennik w bocznym menu
+☐ menu zmiany wagi zagnieżdżone w dziennik w bocznym menu
+☐ możliwość zmiany wagi
 Archive:
+  ✔ kategorie - menu po lewej w meals @done(18-08-05 23:44)
   ✔ add button to activate popup @done(18-07-30 11:18)
