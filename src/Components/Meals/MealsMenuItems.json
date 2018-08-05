@@ -1,0 +1,16 @@
+{
+    "items": [
+        {
+            "name": "Categories"
+        },
+        {
+            "name": "Permitted"
+        },
+        {
+            "name": "Forbidden"
+        },
+        {
+            "name": "All"
+        }
+    ]
+}
