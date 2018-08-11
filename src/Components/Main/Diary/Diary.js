@@ -1,24 +1,42 @@
 import React, { Component } from 'react';
 import MenuDiary from './MenuDiary';
+import DiaryMeals from './diaryMeals/diaryMeals';
+import DiaryWeight from './diaryWeight/diaryWeight';
+import DiaryOther from './diaryOther/diaryOther';
 
 class Diary extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            choosenItem: null
+        };
+
+    }
+
+    handleClick = (e) => {
+        this.setState({
+            choosenItem: e.target.dataset.name
+        });
     }
 
     render() {
         return (
             <React.Fragment>
-                <MenuDiary></MenuDiary>
-                <div>
-                    <h1>Diary</h1>
-                    <h2>Please enter your today dishes or weight</h2>
-                    <form>
-                        <input type="date" />
-                        <input type="number" placeholder="120" />
-                        <button>Submit</button>
-                    </form>
+                <div className="submenuWrapper">
+                    <MenuDiary handleClick={this.handleClick}></MenuDiary>
+                </div>
+                <div className="itemWrapper">
+                    {
+                        this.state.choosenItem === 'diaryMeals' && <DiaryMeals></DiaryMeals>
+                    }
+                    {
+                        this.state.choosenItem === 'diaryWeight' && <DiaryWeight></DiaryWeight>
+                    }
+                    {
+                        this.state.choosenItem === 'diaryOther' && <DiaryOther></DiaryOther>
+                    }
+
+
                 </div>
             </React.Fragment>
         );

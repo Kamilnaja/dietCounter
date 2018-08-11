@@ -44,6 +44,8 @@ ul {
 }
 
 .contentWrapper {
+    display: flex;
+    flex-direction: row;
     border: 2px solid black;
     padding: 5px 10px;
 }
@@ -63,5 +65,9 @@ ul {
     text-align: center;
     line-height: 100px;
     cursor: pointer;
+    list-style-type: none;
+}
 
+.submenuWrapper {
+    min-width: 120px;
 }
