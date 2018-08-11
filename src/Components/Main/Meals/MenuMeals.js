@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import menuItemsDiary from './menuItemsDiary';
+import MenuItemsMeals from './menuItemsMeals';
+import { Link } from 'react-router-dom';
 
-class DiaryMenu extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {}
-    }
+class MenuMeals extends Component {
+
     render() {
         return (
             <ul className="categoryMenu">
@@ -18,8 +16,7 @@ class DiaryMenu extends Component {
                         </li>)
                 }
             </ul>);
-        );
     }
 }
 
-export default DiaryMenu;
+export default MenuMeals;

@@ -1,13 +1,13 @@
 {
     "items": [
         {
-            "name": "Meals"
+            "name": "diaryMeals"
         },
         {
-            "name": "Weight"
+            "name": "diaryWeight"
         },
         {
-            "name": "Other"
+            "name": "diaryOther"
         }
     ]
 }

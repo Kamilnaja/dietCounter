@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import MealsMenu from './MealsMenu';
+import MenuMeals from './MenuMeals';
 import tableHeaders from './../../../MealsTableHeaders';
-import MealsList from './../../../MealsList';
+import MealsList from './MealsList.json';
 
 class Meals extends Component {
     constructor(props) {
@@ -26,7 +26,7 @@ class Meals extends Component {
 
         return (
             <React.Fragment>
-                <MealsMenu></MealsMenu>
+                <MenuMeals></MenuMeals>
                 <table>
                     <thead>
                         <tr>
@@ -37,7 +37,7 @@ class Meals extends Component {
                     </thead>
                     <tbody>
                         {
-                            MealsList.map((item, idx) => <tr key={idx}>
+                            MealsList.items.map((item, idx) => <tr key={idx}>
                                 <td>
                                     {item.id}
                                 </td>

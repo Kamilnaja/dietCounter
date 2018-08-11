@@ -4,8 +4,10 @@
 ☐ menu posiłki zagnieżdżone w dziennik w bocznym menu
 ☐ menu zmiany wagi zagnieżdżone w dziennik w bocznym menu
 ☐ możliwość zmiany wagi
-☐ podzielić Diary na wagę i posiłki i inne tak jak w meals
 ☐ w weight - wykres wagi
+☐ diary - wyświetl w odpowiednim miejscu itemy
+
 Archive:
+  ✔ podzielić Diary na wagę i posiłki i inne tak jak w meals @done(18-08-11 16:28)
   ✔ kategorie - menu po lewej w meals @done(18-08-05 23:44)
   ✔ add button to activate popup @done(18-07-30 11:18)
