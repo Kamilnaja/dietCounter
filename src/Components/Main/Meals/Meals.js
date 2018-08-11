@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import MealsList from './MealsList';
-import tableHeaders from './MealsTableHeaders';
-import MealsMenu from './Components/Meals/MealsMenu';
+import MealsMenu from './MealsMenu';
+import tableHeaders from './../../../MealsTableHeaders';
+import MealsList from './../../../MealsList';
 
 class Meals extends Component {
     constructor(props) {

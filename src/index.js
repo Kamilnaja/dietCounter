@@ -1,9 +1,9 @@
+import 'normalize.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import App from './Components/Main/App';
 import registerServiceWorker from './registerServiceWorker';
-import 'normalize.css';
 import './Style.css';
 
 ReactDOM.render(

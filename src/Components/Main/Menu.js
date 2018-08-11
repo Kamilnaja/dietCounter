@@ -9,7 +9,7 @@ class Menu extends Component {
         return (
             <ul>
                 {
-                    this.props.data.map(item => <Link to={'/' + item}>{item}</Link>)
+                    this.props.data.map((item, idx) => <Link to={'/' + item} key={idx}>{item}</Link>)
                 }
             </ul>
         );

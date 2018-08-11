@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MenuItems from './MenuItems.json';
+import MenuItems from './menuItemsMain.json';
 import SingleMenus from './SingleMenus';
 
 class AppMenu extends Component {

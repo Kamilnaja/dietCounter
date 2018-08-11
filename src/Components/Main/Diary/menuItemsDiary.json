@@ -1,0 +1,13 @@
+{
+    "items": [
+        {
+            "name": "Meals"
+        },
+        {
+            "name": "Weight"
+        },
+        {
+            "name": "Other"
+        }
+    ]
+}

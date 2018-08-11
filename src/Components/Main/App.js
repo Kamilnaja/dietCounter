@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import AppMenu from './AppMenu';
-import Diary from './Diary';
-import Info from './Info';
-import Meals from './Meals';
+import Diary from './Diary/Diary';
+import Meals from './Meals/Meals';
+import Info from './../../Info';
 
 class App extends Component {
 
