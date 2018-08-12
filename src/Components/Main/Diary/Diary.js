@@ -20,22 +20,24 @@ class Diary extends Component {
     }
 
     render() {
+        let item;
+        if (this.state.choosenItem === 'diaryMeals') {
+            item = <DiaryMeals></DiaryMeals>
+        } else if (this.state.choosenItem === 'diaryWeight') {
+            item = <DiaryWeight></DiaryWeight>
+        } else if (this.state.choosenItem === 'diaryOther') {
+            item = <DiaryOther></DiaryOther>
+        }
         return (
             <React.Fragment>
                 <div className="submenuWrapper">
                     <MenuDiary handleClick={this.handleClick}></MenuDiary>
                 </div>
                 <div className="itemWrapper">
-                    {
-                        this.state.choosenItem === 'diaryMeals' && <DiaryMeals></DiaryMeals>
-                    }
-                    {
-                        this.state.choosenItem === 'diaryWeight' && <DiaryWeight></DiaryWeight>
-                    }
-                    {
-                        this.state.choosenItem === 'diaryOther' && <DiaryOther></DiaryOther>
-                    }
 
+                    {
+                        item
+                    }
 
                 </div>
             </React.Fragment>

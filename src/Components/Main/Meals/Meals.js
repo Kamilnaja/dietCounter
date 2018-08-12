@@ -1,64 +1,41 @@
 import React, { Component } from 'react';
 import MenuMeals from './MenuMeals';
-import tableHeaders from './../../../MealsTableHeaders';
-import MealsList from './MealsList.json';
+import Categories from './Categories';
+import All from './All/All';
 
 class Meals extends Component {
     constructor(props) {
         super(props);
-        this.state = { showModal: true };
-        this.handleHide = this.handleHide.bind(this);
+        this.state = {
+            chosenItem: null
+        };
+        this.handleClick = this.handleClick.bind(this);
     }
 
-    handleShow() {
+    handleClick(e) {
         this.setState({
-            showModal: true
-        });
-    }
-
-    handleHide() {
-        this.setState({
-            showModal: false
+            choosenItem: e.target.dataset.name
         });
     }
 
     render() {
+        let item = null;
+        if (this.state.choosenItem === 'Categories') {
+            item = <Categories></Categories>;
+        }
+        else if (this.state.choosenItem === 'All') {
+            item = <All></All>;
+        }
 
         return (
             <React.Fragment>
                 <div className="submenuWrapper">
-                    <MenuMeals></MenuMeals>
+                    <MenuMeals handleClick={this.handleClick}></MenuMeals>
                 </div>
                 <div className="itemWrapper">
-
-                    <table>
-                        <thead>
-                            <tr>
-                                {
-                                    tableHeaders.map((item, idx) => <td key={idx}>{item}</td>)
-                                }
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                MealsList.items.map((item, idx) => <tr key={idx}>
-                                    <td>
-                                        {item.id}
-                                    </td>
-                                    <td>
-                                        {item.name}
-                                    </td>
-                                    <td>
-                                        {item.kcal}
-                                    </td>
-                                </tr>
-                                )
-                            }
-                        </tbody>
-                    </table>
-                    <button onClick={this.handleShow.bind(this)}>
-                        Add next product/meal
-                    </button>
+                    {
+                        item
+                    }
                 </div>
             </React.Fragment>
         );

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import MenuItemsMeals from './menuItemsMeals';
-import { Link } from 'react-router-dom';
 
 class MenuMeals extends Component {
 
@@ -9,10 +8,8 @@ class MenuMeals extends Component {
             <ul className="categoryMenu">
                 {
                     MenuItemsMeals.items.map((item, id) =>
-                        <li key={id}>
-                            <Link to={item.name}>
-                                {item.name}
-                            </Link>
+                        <li key={id} data-name={item.name} onClick={(e) => this.props.handleClick(e)}>
+                            {item.name}
                         </li>)
                 }
             </ul>);
