@@ -7,7 +7,7 @@ class Meals extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            chosenItem: null
+            chosenItem: 'All'
         };
         this.handleClick = this.handleClick.bind(this);
     }

@@ -25,9 +25,11 @@ class AppMenu extends Component {
                         Twoja waga: 125kg
                     </span>
                 </div>
-                {
-                    MenuItems.items[this.state.selected].name
-                }
+                <span>
+                    {
+                        MenuItems.items[this.state.selected].name
+                    }
+                </span>
                 <ul className="menu">
                     {
                         MenuItems.items.map((item, id) =>

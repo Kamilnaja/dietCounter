@@ -16,7 +16,8 @@ class MenuDiary extends Component {
                             {item.name}
                         </li>)
                 }
-            </ul>);
+            </ul>
+        );
     }
 }
 

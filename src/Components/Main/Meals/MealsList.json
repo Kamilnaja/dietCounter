@@ -9,6 +9,26 @@
             "id": 2,
             "name": "Kiełbasa",
             "kcal": 300
+        },
+        {
+            "id": 3,
+            "name": "Utopence",
+            "kcal": 300
+        },
+        {
+            "id": 4,
+            "name": "Papryka",
+            "kcal": 300
+        },
+        {
+            "id": 5,
+            "name": "Pomidor",
+            "kcal": 30
+        },
+        {
+            "id": 6,
+            "name": "Kapusta włoska",
+            "kcal": 123
         }
     ]
 }
