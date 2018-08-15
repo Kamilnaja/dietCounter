@@ -1,3 +1,3 @@
-let tableHeaders = ['number', 'name', 'kcal'];
+let tableHeaders = ['number', 'name', 'kcal', 'category'];
 
 export default tableHeaders;

@@ -10,7 +10,6 @@ class SingleMenus extends Component {
     }
 
     render() {
-
         return (
             <React.Fragment>
                 <li>
@@ -21,7 +20,6 @@ class SingleMenus extends Component {
                         {this.props.item.name}
                     </Link>
                 </li>
-
             </React.Fragment>
         );
     }

@@ -9,7 +9,11 @@
 ☐ submenu - show, which item is choosen
 ☐ table - show which item is choosen
 ☐ flat desing - 
+☐ get data from the api
+☐ send data to forbidden tab
+☐ create table component
 Archive:
+  ✔ add notes to the food list @done(18-08-15 21:31)
   ✔ diary - wyświetl w odpowiednim miejscu itemy @done(18-08-11 21:26)
   ✘ możliwość zmiany wagi @cancelled(18-08-11 16:44)
   ✔ podzielić Diary na wagę i posiłki i inne tak jak w meals @done(18-08-11 16:28)

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MenuMeals from './MenuMeals';
 import Categories from './Categories';
 import All from './All/All';
+import Forbidden from './forbidden/Forbidden';
 
 class Meals extends Component {
     constructor(props) {
@@ -19,12 +20,13 @@ class Meals extends Component {
     }
 
     render() {
-        let item = null;
+        let item = <All></All>; // todo -change
         if (this.state.choosenItem === 'Categories') {
             item = <Categories></Categories>;
-        }
-        else if (this.state.choosenItem === 'All') {
+        } else if (this.state.choosenItem === 'All') {
             item = <All></All>;
+        } else if (this.state.choosenItem === 'Forbidden') {
+            item = <Forbidden></Forbidden>;
         }
 
         return (
