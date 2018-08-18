@@ -3,6 +3,7 @@ import MenuMeals from './MenuMeals';
 import Categories from './categories/Categories';
 import All from './All/All';
 import Forbidden from './forbidden/Forbidden';
+import Permitted from './permitted/Permitted';
 
 class Meals extends Component {
     constructor(props) {
@@ -27,6 +28,8 @@ class Meals extends Component {
             item = <All url="allProducts"></All>;
         } else if (this.state.choosenItem === 'Forbidden') {
             item = <Forbidden url="forbidden"></Forbidden>;
+        } else if (this.state.choosenItem === 'Permitted') {
+            item = <Permitted url="permitted"></Permitted>;
         }
 
         return (

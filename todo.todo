@@ -9,10 +9,14 @@
 ☐ submenu - show, which item is choosen
 ☐ table - show which item is choosen
 ☐ flat desing - 
-☐ get data from the api
-☐ send data to forbidden tab
-☐ create table component
+☐ scripting 
+☐ add info about product on right
+☐ add info about category 
 Archive:
+  ✔ send data to forbidden tab @done(18-08-18 20:44)
+  ✔ create connection to db @done(18-08-18 20:44)
+  ✔ get data from the api @done(18-08-18 17:35)
+  ✔ create table component @done(18-08-18 17:35)
   ✔ add notes to the food list @done(18-08-15 21:31)
   ✔ diary - wyświetl w odpowiednim miejscu itemy @done(18-08-11 21:26)
   ✘ możliwość zmiany wagi @cancelled(18-08-11 16:44)

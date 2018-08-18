@@ -1,5 +1,5 @@
 import React from 'react';
-import enhance from './../enhance';
+import tableWrapper from './../tableWrapper';
 import PropTypes from 'prop-types';
 
 const Forbidden = (props) => {
@@ -10,4 +10,4 @@ Forbidden.propTypes = {
     renderTable: PropTypes.func.isRequired
 };
 
-export default enhance(Forbidden);
+export default tableWrapper(Forbidden);

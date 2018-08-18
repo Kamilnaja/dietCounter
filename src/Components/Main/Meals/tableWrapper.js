@@ -2,7 +2,7 @@ import React from 'react';
 import Table from './../../Utils/table';
 import tableHeaders from './../../../MealsTableHeaders';
 
-export default (Component) => {
+export default Component => {
     return class extends React.Component {
         constructor(props) {
             super(props);
@@ -17,9 +17,8 @@ export default (Component) => {
                 .then(res => { return res.json(); })
                 .then(myJson => {
                     this.setState({
-                        items: myJson.items
+                        items: myJson
                     });
-
                 });
         }
 
