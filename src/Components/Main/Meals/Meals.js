@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MenuMeals from './MenuMeals';
-import Categories from './Categories';
+import Categories from './categories/Categories';
 import All from './All/All';
 import Forbidden from './forbidden/Forbidden';
 
@@ -20,13 +20,13 @@ class Meals extends Component {
     }
 
     render() {
-        let item = <All></All>; // todo -change
+        let item = <All url="allProducts"></All>; // todo -change
         if (this.state.choosenItem === 'Categories') {
-            item = <Categories></Categories>;
+            item = <Categories url="categories"></Categories>;
         } else if (this.state.choosenItem === 'All') {
-            item = <All></All>;
+            item = <All url="allProducts"></All>;
         } else if (this.state.choosenItem === 'Forbidden') {
-            item = <Forbidden></Forbidden>;
+            item = <Forbidden url="forbidden"></Forbidden>;
         }
 
         return (
@@ -35,9 +35,7 @@ class Meals extends Component {
                     <MenuMeals handleClick={this.handleClick}></MenuMeals>
                 </div>
                 <div className="itemWrapper">
-                    {
-                        item
-                    }
+                    {item}
                 </div>
             </React.Fragment>
         );

@@ -1,21 +1,13 @@
-import React, { Component } from 'react';
-import { Info } from './../../../Utils/Info';
-import Table from './../../../Utils/table';
-import tableHeaders from './../../../../MealsTableHeaders';
+import React from 'react';
+import enhance from './../enhance';
+import PropTypes from 'prop-types';
 
-class Forbidden extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-    render() {
-        return (
-            <React.Fragment>
-                <Info></Info>
-                {/* <Table headers={tableHeaders} data={MealsList}></Table> */}
-            </React.Fragment>
-        );
-    }
-}
+const Forbidden = (props) => {
+    return <div>{props.renderTable()}</div>;
+};
 
-export default Forbidden;
+Forbidden.propTypes = {
+    renderTable: PropTypes.func.isRequired
+};
+
+export default enhance(Forbidden);

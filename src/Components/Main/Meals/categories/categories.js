@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import enhance from './../enhance';
+import PropTypes from 'prop-types';
 
-class Categories extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-    render() {
-        return (<div>Categories</div>);
-    }
-}
+const Categories = (props) => {
+    return <div>{props.renderTable()}</div>;
+};
 
-export default Categories;
+Categories.propTypes = {
+    renderTable: PropTypes.func.isRequired
+};
+
+export default enhance(Categories);

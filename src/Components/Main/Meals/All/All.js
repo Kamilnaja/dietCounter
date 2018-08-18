@@ -1,39 +1,13 @@
-import React, { Component } from 'react';
-import { Info } from '../../../Utils/Info';
-import tableHeaders from './../../../../MealsTableHeaders';
-import Table from './../../../Utils/table';
+import React from 'react';
+import enhance from './../enhance';
+import PropTypes from 'prop-types';
 
-class All extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            items: []
-        };
-    }
+const All = (props) => {
+    return <div>{props.renderTable()}</div>;
+};
 
-    componentDidMount() {
-        fetch('http://localhost:8080/allProducts')
-            .then(res => { return res.json(); })
-            .then(myJson => {
-                this.setState({
-                    items: myJson.items
-                });
+All.propTypes = {
+    renderTable: PropTypes.func.isRequired
+};
 
-            });
-    }
-
-    render() {
-        return (
-            <React.Fragment>
-                <Info>All Products</Info>
-                {
-                    this.state.items.length === 0 ? 'Loading'
-                        : <Table headers={tableHeaders} data={this.state.items}></Table>
-                }
-
-            </React.Fragment>
-        );
-    }
-}
-
-export default All;
+export default enhance(All);
