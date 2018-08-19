@@ -11,7 +11,8 @@
 ☐ flat desing - 
 ☐ scripting 
 ☐ add info about product on right
-☐ add info about category 
+☐ add info about category
+☐ add category from ajax 
 Archive:
   ✔ send data to forbidden tab @done(18-08-18 20:44)
   ✔ create connection to db @done(18-08-18 20:44)

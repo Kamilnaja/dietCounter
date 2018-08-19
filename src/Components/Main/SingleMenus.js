@@ -16,7 +16,7 @@ class SingleMenus extends Component {
                     <Link
                         to={this.props.item.name}
                         onClick={(id) => this.props.handleClick(id)}
-                        className={this.props.selected === this.props.id ? 'menuImage isSelected' : 'menuImage'}>
+                        className={this.props.selected === this.props.id ? 'menuItem isSelected' : 'menuItem'}>
                         {this.props.item.name}
                     </Link>
                 </li>

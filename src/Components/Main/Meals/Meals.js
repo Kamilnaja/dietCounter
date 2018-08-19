@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import MenuMeals from './MenuMeals';
 import Categories from './categories/Categories';
-import All from './All/All';
+import All from './all/All';
 import Forbidden from './forbidden/Forbidden';
 import Permitted from './permitted/Permitted';
+import Add from './add/Add';
 
 class Meals extends Component {
     constructor(props) {
@@ -38,7 +39,9 @@ class Meals extends Component {
                     <MenuMeals handleClick={this.handleClick}></MenuMeals>
                 </div>
                 <div className="itemWrapper">
+                    <h2>{this.state.choosenItem}</h2>
                     {item}
+                    <Add></Add>
                 </div>
             </React.Fragment>
         );

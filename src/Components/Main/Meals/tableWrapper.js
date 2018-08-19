@@ -24,7 +24,7 @@ export default Component => {
 
         renderTable() {
             return (
-                <div>
+                <div className="tableWrapper">
                     {
                         this.state.items.length === 0 ? 'Loading'
                             : <Table headers={tableHeaders} data={this.state.items}></Table>
