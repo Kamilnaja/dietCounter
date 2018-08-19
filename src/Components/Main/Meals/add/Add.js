@@ -6,7 +6,13 @@ class Add extends Component {
         this.state = {
             categories: ['permitted', 'forbidden', 'unknown']
         };
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    handleSubmit(e) {
+        e.preventDefault();
+    }
+
     render() {
         return (
             <div>
@@ -29,6 +35,7 @@ class Add extends Component {
                         <label htmlFor="info">Info</label>
                         <input type="text" id="info" />
                     </div>
+                    <button onClick={this.handleSubmit}>Send</button>
                 </form>
             </div>
         );

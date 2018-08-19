@@ -15,11 +15,17 @@ export default Component => {
         componentDidMount() {
             fetch(`http://localhost:8080/${this.props.url}`)
                 .then(res => { return res.json(); })
-                .then(myJson => {
+                .then(result => {
                     this.setState({
-                        items: myJson
+                        items: result
                     });
-                });
+                }, error => {
+                    this.setState({
+                        isLoaded: true,
+                        error
+                    })
+                }
+                );
         }
 
         renderTable() {
@@ -27,13 +33,18 @@ export default Component => {
                 <div className="tableWrapper">
                     {
                         this.state.items.length === 0 ? 'Loading'
-                            : <Table headers={tableHeaders} data={this.state.items}></Table>
+                            : <Table headers={tableHeaders} data={this.state.items} ></Table>
                     }
                 </div>
             );
         }
         render() {
-            return <Component renderTable={this.renderTable}></Component>;
+            const { error } = this.state;
+            if (error) {
+                return <div>Error </div>
+            } else {
+                return <Component renderTable={this.renderTable}></Component>;
+            }
         }
     };
 };

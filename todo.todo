@@ -13,6 +13,8 @@
 ☐ add info about product on right
 ☐ add info about category
 ☐ add category from ajax 
+✔ serve error on data load @critical @done(18-08-19 19:15)
+☐ create error element  @critical 
 Archive:
   ✔ send data to forbidden tab @done(18-08-18 20:44)
   ✔ create connection to db @done(18-08-18 20:44)

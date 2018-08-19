@@ -46,7 +46,7 @@ class Table extends Component {
 
 Table.propTypes = {
     data: PropTypes.array,
-    headers: PropTypes.array
+    headers: PropTypes.array,
 };
 
 export default Table;
