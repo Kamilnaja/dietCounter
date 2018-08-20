@@ -34,9 +34,7 @@ class Meals extends Component {
 
         return (
             <React.Fragment>
-                <div className="submenuWrapper">
-                </div>
-                <div className="itemWrapper">
+                <div className="itemWrapper wrapper">
                     <h2>{this.state.choosenItem}</h2>
                     {item}
                     <Add></Add>

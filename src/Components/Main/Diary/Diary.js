@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MenuDiary from './MenuDiary';
 import DiaryMeals from './diaryMeals/diaryMeals';
 import DiaryWeight from './diaryWeight/diaryWeight';
 import DiaryOther from './diaryOther/diaryOther';
@@ -10,7 +9,6 @@ class Diary extends Component {
         this.state = {
             choosenItem: null
         };
-
     }
 
     handleClick = (e) => {
@@ -30,10 +28,7 @@ class Diary extends Component {
         }
         return (
             <React.Fragment>
-                <div className="submenuWrapper">
-                    <MenuDiary handleClick={this.handleClick}></MenuDiary>
-                </div>
-                <div className="itemWrapper">
+                <div className="itemWrapper wrapper">
 
                     {
                         item

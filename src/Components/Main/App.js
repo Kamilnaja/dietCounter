@@ -9,7 +9,9 @@ class App extends Component {
         return (
             <div className="wrapper">
                 <div className="contentWrapper">
-                    <MenuSidebar></MenuSidebar>
+                    <div className="wrapper">
+                        <MenuSidebar></MenuSidebar>
+                    </div>
                     <Switch>
                         <Route path='/meals' component={Meals}></Route>
                         <Route path='/diary' component={Diary}></Route>
