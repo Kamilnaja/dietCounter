@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MenuMeals from './MenuMeals';
 import Categories from './categories/Categories';
 import All from './all/All';
 import Forbidden from './forbidden/Forbidden';
@@ -36,7 +35,6 @@ class Meals extends Component {
         return (
             <React.Fragment>
                 <div className="submenuWrapper">
-                    <MenuMeals handleClick={this.handleClick}></MenuMeals>
                 </div>
                 <div className="itemWrapper">
                     <h2>{this.state.choosenItem}</h2>

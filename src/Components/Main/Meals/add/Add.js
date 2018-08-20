@@ -4,7 +4,7 @@ class Add extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            categories: ['permitted', 'forbidden', 'unknown']
+            categories: []
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -12,7 +12,15 @@ class Add extends Component {
     handleSubmit(e) {
         e.preventDefault();
     }
-
+    componentDidMount() {
+        fetch('http://localhost:8080/categories')
+            .then(res => { return res.json(); })
+            .then(res => {
+                this.setState({
+                    categories: res
+                });
+            });
+    }
     render() {
         return (
             <div>

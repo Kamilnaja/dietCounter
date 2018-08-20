@@ -12,11 +12,11 @@ class SingleMenus extends Component {
     render() {
         return (
             <React.Fragment>
-                <li>
+                <li className="menuSidebar_item">
                     <Link
                         to={this.props.item.name}
                         onClick={(id) => this.props.handleClick(id)}
-                        className={this.props.selected === this.props.id ? 'menuItem isSelected' : 'menuItem'}>
+                        className={this.props.selected === this.props.id ? 'menuSidebar_link isSelected' : 'menuItem'}>
                         {this.props.item.name}
                     </Link>
                 </li>

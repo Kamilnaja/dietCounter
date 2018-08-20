@@ -12,10 +12,11 @@
 ☐ scripting 
 ☐ add info about product on right
 ☐ add info about category
-☐ add category from ajax 
-✔ serve error on data load @critical @done(18-08-19 19:15)
-☐ create error element  @critical 
+☐ zmienić taby u góry, menu z lewej
 Archive:
+  ✔ get category from ajax @done(18-08-19 19:51)
+  ✔ serve error on data load @critical @done(18-08-19 19:15)
+  ✔ create error element  @critical @done(18-08-19 19:28)
   ✔ send data to forbidden tab @done(18-08-18 20:44)
   ✔ create connection to db @done(18-08-18 20:44)
   ✔ get data from the api @done(18-08-18 17:35)

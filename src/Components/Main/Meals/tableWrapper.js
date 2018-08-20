@@ -1,6 +1,7 @@
 import React from 'react';
 import Table from './../../Utils/table';
 import tableHeaders from './../../../MealsTableHeaders';
+import { Info } from './../../Utils/Info';
 
 export default Component => {
     return class extends React.Component {
@@ -23,9 +24,8 @@ export default Component => {
                     this.setState({
                         isLoaded: true,
                         error
-                    })
-                }
-                );
+                    });
+                });
         }
 
         renderTable() {
@@ -41,7 +41,7 @@ export default Component => {
         render() {
             const { error } = this.state;
             if (error) {
-                return <div>Error </div>
+                return <Info type="error">Error when connecting with api</Info>;
             } else {
                 return <Component renderTable={this.renderTable}></Component>;
             }
