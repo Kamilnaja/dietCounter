@@ -48,10 +48,14 @@ export default Component => {
                 return (
                     <Info type="error">
                         Error when connecting with api
-                </Info>
+                    </Info>
                 );
             } else {
-                return <Component renderTable={this.renderTable}></Component>;
+                return (
+                    <Component
+                        renderTable={this.renderTable}>
+                    </Component>
+                );
             }
         }
     };

@@ -135,7 +135,8 @@ ul {
 }
 
 .tabbed {
-
+    border: 5px dashed orangered;
+    width: 100%;
 }
 
 .tabbedMenu {

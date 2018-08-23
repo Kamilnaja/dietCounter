@@ -8,19 +8,20 @@
 ☐ meals - wyświetl itemy w odpowiednim miejscu
 ☐ submenu - show, which item is choosen
 ☐ table - show which item is choosen
-✘ flat desing - @cancelled(18-08-21 23:03)
-☐ scripting 
-✘ add info about product on right @cancelled(18-08-21 23:16)
+☐ scripting  for mongo
 ☐ add info about category
-☐ add tabbed element
 ☐ display data from diary
-☐ better styles for table
 ☐ add + on the last column of table
 ☐ change components without state into functional 
 ☐ check RWD
 ☐ add header above
+☐ repair handle click
 
 Archive:
+  ✔ add tabbed element @done(18-08-23 23:11)
+  ✔ better styles for table @done(18-08-23 23:11)
+  ✘ flat desing - @cancelled(18-08-21 23:03)
+  ✘ add info about product on right @cancelled(18-08-21 23:16)
   ✔ zmienić taby u góry, menu z lewej @done(18-08-20 23:14)
   ✔ get category from ajax @done(18-08-19 19:51)
   ✔ serve error on data load @critical @done(18-08-19 19:15)
