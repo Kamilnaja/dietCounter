@@ -108,13 +108,14 @@ ul {
     width: 100%;
 }
 
+.table {
+    border: 1px solid black;
+    width: calc(100% - 50px);
+}
+
 .table tr {
     height: 30px;
     border-top: 2px solid black;
-}
-
-tr:active {
-    background-color: red;
 }
 
 .info {
@@ -133,11 +134,41 @@ tr:active {
     color: white;
 }
 
-.productInfo {
-    display: block;
+.tabbed {
+
 }
 
-.tableWrapper {
+.tabbedMenu {
     display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-bottom: 0;
 }
 
+.tabbedMenuItem {
+    border-top: 2px solid blue;
+    border-left: 2px solid blue;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.tabbedMenuItem.activetrue {
+    background-color: cornsilk;
+}
+
+.tabbedMenuItem:last-child {
+    border-right: 2px solid blue;
+}
+
+.tabbedContent {
+    border: 2px solid blue;
+}
+
+.tabbedContent {
+    border: 2px solid blue;
+}
+
+.tabbedContent {
+    padding: 5px 10px;
+    border: 2px solid blue;
+}

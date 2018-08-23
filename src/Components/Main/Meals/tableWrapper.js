@@ -33,15 +33,23 @@ export default Component => {
                 <div className="tableWrapper">
                     {
                         this.state.items.length === 0 ? 'Loading'
-                            : <Table headers={tableHeaders} data={this.state.items} ></Table>
+                            : <Table
+                                headers={tableHeaders}
+                                data={this.state.items} >
+                            </Table>
                     }
                 </div>
             );
         }
+
         render() {
             const { error } = this.state;
             if (error) {
-                return <Info type="error">Error when connecting with api</Info>;
+                return (
+                    <Info type="error">
+                        Error when connecting with api
+                </Info>
+                );
             } else {
                 return <Component renderTable={this.renderTable}></Component>;
             }

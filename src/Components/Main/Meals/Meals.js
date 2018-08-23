@@ -35,7 +35,6 @@ class Meals extends Component {
         return (
             <React.Fragment>
                 <div className="itemWrapper wrapper">
-                    <h2>{this.state.choosenItem}</h2>
                     {item}
                     <Add></Add>
                 </div>

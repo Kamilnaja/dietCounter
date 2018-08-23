@@ -8,12 +8,20 @@
 ☐ meals - wyświetl itemy w odpowiednim miejscu
 ☐ submenu - show, which item is choosen
 ☐ table - show which item is choosen
-☐ flat desing - 
+✘ flat desing - @cancelled(18-08-21 23:03)
 ☐ scripting 
-☐ add info about product on right
+✘ add info about product on right @cancelled(18-08-21 23:16)
 ☐ add info about category
-☐ zmienić taby u góry, menu z lewej
+☐ add tabbed element
+☐ display data from diary
+☐ better styles for table
+☐ add + on the last column of table
+☐ change components without state into functional 
+☐ check RWD
+☐ add header above
+
 Archive:
+  ✔ zmienić taby u góry, menu z lewej @done(18-08-20 23:14)
   ✔ get category from ajax @done(18-08-19 19:51)
   ✔ serve error on data load @critical @done(18-08-19 19:15)
   ✔ create error element  @critical @done(18-08-19 19:28)

@@ -3,7 +3,7 @@ import tableWrapper from './../tableWrapper';
 import PropTypes from 'prop-types';
 
 const All = (props) => {
-    return <div>{props.renderTable()}</div>;
+    return (<div>{props.renderTable()}</div>);
 };
 
 All.propTypes = {
