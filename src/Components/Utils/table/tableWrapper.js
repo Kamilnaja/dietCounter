@@ -8,9 +8,14 @@ export default Component => {
         constructor(props) {
             super(props);
             this.state = {
-                items: []
+                items: [],
+                name: '',
+                kcal: '',
+                category: ''
             };
             this.renderTable = this.renderTable.bind(this);
+            this.handleSubmit = this.handleSubmit.bind(this);
+            this.handleChange = this.handleChange.bind(this);
         }
 
         componentDidMount() {
@@ -28,6 +33,51 @@ export default Component => {
                 });
         }
 
+        handleChange(event, stateElem) {
+            if (stateElem === 'name') {
+                this.setState({
+                    name: event.target.value
+                });
+            } else if (stateElem === 'kcal') {
+                this.setState({
+                    kcal: event.target.value
+                });
+            } else if (stateElem === 'category') {
+                this.setState({
+                    category: event.target.value
+                });
+            }
+        }
+
+        handleSubmit(event) {
+            event.preventDefault();
+            var payload = {
+                name: this.state.name,
+                kcal: parseInt(this.state.kcal, 10),
+                category: this.state.category
+            };
+
+            fetch('http://localhost:8080/addProduct', {
+                method: 'POST',
+                body: JSON.stringify(payload),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(response => {
+                    this.setState({
+                        items: response
+                    });
+                })
+                .catch(error => console.error('Fetch Error =\n', error));
+            this.setState({
+                showAddingForm: false,
+                items: [{ id: 1, name: 'dupa' }]
+            });
+        }
+
         renderTable() {
             return (
                 <div className="tableWrapper">
@@ -38,7 +88,10 @@ export default Component => {
                         this.state.items.length === 0 ? 'Loading'
                             : <Table
                                 headers={tableHeaders}
-                                data={this.state.items} >
+                                data={this.state.items}
+                                handleSubmit={this.handleSubmit}
+                                handleChange={this.handleChange}
+                            >
                             </Table>
                     }
                 </div>

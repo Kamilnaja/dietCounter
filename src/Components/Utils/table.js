@@ -5,57 +5,19 @@ class Table extends Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleChange = this.handleChange.bind(this);
         this.state = {
-            showAddingForm: false,
-            name: '',
-            kcal: '',
-            category: ''
-        }
+            showAddingForm: false
+        };
     }
 
     handleClick() {
         this.setState({
             showAddingForm: true
         });
-    }
-
-    handleSubmit(event) {
-        event.preventDefault();
-        var payload = {
-            name: this.state.name,
-            kcal: parseInt(this.state.kcal),
-            category: this.state.category
-        };
-        // console.log(payload)
-        fetch('http://localhost:8080/addProduct', {
-            method: 'POST',
-            body: JSON.stringify(payload),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(response => response.json())
-            .catch(error => console.error('Fetch Error =\n', error));
-        this.setState({ showAddingForm: false });
-    }
-
-    handleChange(event, stateElem) {
-        if (stateElem === 'name') {
-            this.setState({
-                name: event.target.value
-            });
-        } else if (stateElem === 'kcal') {
-            this.setState({
-                kcal: event.target.value
-            });
-        } else if (stateElem === 'category') {
-            this.setState({
-                category: event.target.value
-            });
-        }
+        window.scroll({
+            top: 100000, // todo - scroll to bottom
+            behavior: 'smooth'
+        });
     }
 
     render() {
@@ -105,16 +67,16 @@ class Table extends Component {
                             <td>
                             </td>
                             <td>
-                                <input type="text" placeholder="name" value={this.state.name} onChange={(e) => this.handleChange(e, 'name')} />
+                                <input type="text" placeholder="name" value={this.state.name} onChange={(e) => this.props.handleChange(e, 'name')} />
                             </td>
                             <td>
-                                <input type="text" placeholder="kcal" value={this.state.kcal} onChange={(e) => this.handleChange(e, 'kcal')} />
+                                <input type="text" placeholder="kcal" value={this.state.kcal} onChange={(e) => this.props.handleChange(e, 'kcal')} />
                             </td>
                             <td>
-                                <input type="text" placeholder="category" value={this.state.category} onChange={(e) => this.handleChange(e, 'category')} />
+                                <input type="text" placeholder="category" value={this.state.category} onChange={(e) => this.props.handleChange(e, 'category')} />
                             </td>
                             <td>
-                                <button onClick={(e) => this.handleSubmit(e)}>
+                                <button onClick={(e) => this.props.handleSubmit(e)}>
                                     Save
                                 </button>
                             </td>
@@ -130,6 +92,8 @@ class Table extends Component {
 Table.propTypes = {
     data: PropTypes.array,
     headers: PropTypes.array,
+    handleSubmit: PropTypes.func,
+    handleChange: PropTypes.func
 };
 
 export default Table;
