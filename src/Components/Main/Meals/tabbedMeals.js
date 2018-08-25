@@ -1,10 +1,9 @@
+import { PropTypes } from 'prop-types';
 import React from 'react';
 import tabbedWrapper from '../../Utils/tabbed/tabbedWrapper';
-import { PropTypes } from 'prop-types';
 import All from './all/All';
 import Forbidden from './forbidden/Forbidden';
 import Permitted from './permitted/Permitted';
-
 
 const TabbedMeals = (props) => {
     return (
@@ -28,7 +27,7 @@ const TabbedMeals = (props) => {
 TabbedMeals.propTypes = {
     active: PropTypes.string,
     items: PropTypes.array,
-    renderTabs: PropTypes.function
+    renderTabs: PropTypes.func
 };
 
 export default tabbedWrapper(TabbedMeals);

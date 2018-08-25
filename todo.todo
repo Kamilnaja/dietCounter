@@ -5,23 +5,28 @@
 ☐ menu zmiany wagi zagnieżdżone w dziennik w bocznym menu
 ☐ w weight - wykres wagi i zmiany
 ☐ w diary - możliwość zmiany wagi
-☐ meals - wyświetl itemy w odpowiednim miejscu
 ☐ submenu - show, which item is choosen
-☐ table - show which item is choosen
 ☐ scripting  for mongo
 ☐ add info about category
 ☐ display data from diary
-☐ add + on the last column of table
 ☐ change components without state into functional 
 ☐ check RWD
 ☐ add header above
-✔ add different content on different tabs @done(18-08-25 12:15)
-✔ Ustawienie divów w środku ma być oddzielnie dla każdego na razie @done(18-08-25 12:15)
-✔ repair handle click @done(18-08-25 11:39)
-✔ element tabs ma mieć automatycznie generowane menu w tabbedWrapper lub w tabbed. @done(18-08-25 11:51)
-☐ add table info
+☐ on click expand and show more info
+☐ add + on the last column of table
+✔ for for adding eatems @today @done(18-08-25 16:53)
+☐ add button for edit item
+☐ add button for remove item
+☐ display new data
 
 Archive:
+  ✔ add different content on different tabs @done(18-08-25 12:15)
+  ✔ Ustawienie divów w środku ma być oddzielnie dla każdego na razie @done(18-08-25 12:15)
+  ✔ repair handle click @done(18-08-25 11:39)
+  ✔ element tabs ma mieć automatycznie generowane menu w tabbedWrapper lub w tabbed. @done(18-08-25 11:51)
+  ✔ add table info @done(18-08-25 14:39)
+  ✔ meals - wyświetl itemy w odpowiednim miejscu @done(18-08-25 14:42)
+  ✔ table - show which item is choosen @done(18-08-25 14:42)
   ✔ add tabbed element @done(18-08-23 23:11)
   ✔ better styles for table @done(18-08-23 23:11)
   ✘ flat desing - @cancelled(18-08-21 23:03)

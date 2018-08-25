@@ -38,7 +38,6 @@ export default Component => {
                     handleClick={this.handleClick}
                     renderTabs={this.renderTabs}
                     items={this.props.items}
-                // todo - add ... parameter
                 ></Component>
             );
         }
