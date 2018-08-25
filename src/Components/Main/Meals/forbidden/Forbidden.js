@@ -1,5 +1,5 @@
 import React from 'react';
-import tableWrapper from './../tableWrapper';
+import tableWrapper from './../../../Utils/table/tableWrapper';
 import PropTypes from 'prop-types';
 
 const Forbidden = (props) => {

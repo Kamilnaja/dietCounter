@@ -1,32 +1,34 @@
 import React from 'react';
 import tabbedWrapper from '../../Utils/tabbed/tabbedWrapper';
 import { PropTypes } from 'prop-types';
+import All from './all/All';
+import Forbidden from './forbidden/Forbidden';
+import Permitted from './permitted/Permitted';
+
 
 const TabbedMeals = (props) => {
     return (
         <div className="tabbed">
-            <ul className="tabbedMenu">
+            {props.renderTabs()}
+            <div className="tabbedContent">
                 {
-                    props.items.map((item, idx) => (
-                        <li
-                            className={'tabbedMenuItem active' + (props.active === item)}
-                            key={idx}
-                            onClick={(e) => props.handleClick(e)}>
-                            {item}
-                        </li>
-                    ))
+                    props.active === 'All' && <All url='all' title="All items"></All>
                 }
-            </ul>
-            {props.renderTabsContent()}
+                {
+                    props.active === 'Forbidden' && <Forbidden url='forbidden' title="Forbidden items"></Forbidden>
+                }
+                {
+                    props.active === 'Permitted' && <Permitted url='permitted' title="Permitted items"></Permitted>
+                }
+            </div>
         </div>
     );
 };
 
 TabbedMeals.propTypes = {
-    renderTabs: PropTypes.func.isRequired,
-    renderTabsContent: PropTypes.func.isRequired,
-    active: PropTypes.bool,
-    items: PropTypes.array
+    active: PropTypes.string,
+    items: PropTypes.array,
+    renderTabs: PropTypes.function
 };
 
 export default tabbedWrapper(TabbedMeals);

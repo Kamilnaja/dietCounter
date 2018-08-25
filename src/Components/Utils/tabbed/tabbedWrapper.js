@@ -9,12 +9,19 @@ export default Component => {
             this.state = { active: 'All' };
         }
 
-        renderTabsContent() {
-            return (
-                <div className="tabbedContent">
-                    this is tab content
-                </div>
-            );
+        renderTabs() {
+            return <ul className="tabbedMenu">
+                {
+                    this.items.map((item, idx) => (
+                        <li
+                            className={'tabbedMenuItem active' + (this.active === item)}
+                            key={idx}
+                            onClick={(e) => this.handleClick(e)}>
+                            {item}
+                        </li>
+                    ))
+                }
+            </ul>;
         }
 
         handleClick(event) {
@@ -27,13 +34,11 @@ export default Component => {
         render() {
             return (
                 <Component
-
                     active={this.state.active}
                     handleClick={this.handleClick}
                     renderTabs={this.renderTabs}
                     items={this.props.items}
-                    // todo - add ... parameter
-                    renderTabsContent={this.renderTabsContent}
+                // todo - add ... parameter
                 ></Component>
             );
         }

@@ -15,7 +15,11 @@
 ☐ change components without state into functional 
 ☐ check RWD
 ☐ add header above
-☐ repair handle click
+✔ add different content on different tabs @done(18-08-25 12:15)
+✔ Ustawienie divów w środku ma być oddzielnie dla każdego na razie @done(18-08-25 12:15)
+✔ repair handle click @done(18-08-25 11:39)
+✔ element tabs ma mieć automatycznie generowane menu w tabbedWrapper lub w tabbed. @done(18-08-25 11:51)
+☐ add table info
 
 Archive:
   ✔ add tabbed element @done(18-08-23 23:11)

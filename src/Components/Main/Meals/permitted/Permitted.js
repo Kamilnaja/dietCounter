@@ -1,6 +1,6 @@
 import React from 'react';
-import tableWrapper from './../tableWrapper';
 import PropTypes from 'prop-types';
+import tableWrapper from './../../../Utils/table/tableWrapper';
 
 const Permitted = (props) => {
     return <div>{props.renderTable()}</div>;
