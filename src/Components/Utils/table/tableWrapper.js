@@ -1,7 +1,13 @@
 import React from 'react';
-import Table from './../../Utils/table';
+import Table from './../../Utils//table/table';
 import tableHeaders from './../../../MealsTableHeaders';
 import { Info } from './../../Utils/Info';
+
+/**
+ * Wrapper for table element.
+ * Is responsible for every main action in table component
+ * And his state
+ */
 
 export default Component => {
     return class extends React.Component {
@@ -11,11 +17,13 @@ export default Component => {
                 items: [],
                 name: '',
                 kcal: '',
-                category: ''
+                category: '',
+                showAddingForm: false,
             };
             this.renderTable = this.renderTable.bind(this);
             this.handleSubmit = this.handleSubmit.bind(this);
             this.handleChange = this.handleChange.bind(this);
+            this.expandAddingForm = this.expandAddingForm.bind(this);
         }
 
         componentDidMount() {
@@ -49,6 +57,16 @@ export default Component => {
             }
         }
 
+        expandAddingForm() {
+            this.setState({
+                showAddingForm: true
+            });
+            window.scroll({
+                top: 100000, // todo - scroll to bottom
+                behavior: 'smooth'
+            });
+        }
+
         handleSubmit(event) {
             event.preventDefault();
             var payload = {
@@ -73,7 +91,7 @@ export default Component => {
                 })
                 .catch(error => console.error('Fetch Error =\n', error));
             this.setState({
-                showAddingForm: false,
+                showAddingForm: false
             });
         }
 
@@ -91,6 +109,8 @@ export default Component => {
                                 data={this.state.items}
                                 handleSubmit={this.handleSubmit}
                                 handleChange={this.handleChange}
+                                expandAddingForm={this.expandAddingForm}
+                                showAddingForm={this.state.showAddingForm}
                             >
                             </Table>
                     }
