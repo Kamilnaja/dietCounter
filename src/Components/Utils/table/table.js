@@ -52,7 +52,7 @@ class Table extends Component {
                     {
                         this.props.showAddingForm && (
                             <TableAddingForm
-                                handleChange={this.props.handleChange}
+                                {...this.props}
                             ></TableAddingForm>
                         )
                     }

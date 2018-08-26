@@ -106,12 +106,12 @@ export default Component => {
                         this.state.items.length === 0 ? 'Loading'
                             : <Table
                                 headers={tableHeaders}
-                                rows={this.props.rows}
                                 data={this.state.items}
                                 handleSubmit={this.handleSubmit}
                                 handleChange={this.handleChange}
                                 expandAddingForm={this.expandAddingForm}
                                 showAddingForm={this.state.showAddingForm}
+                                {...this.props}
                             >
                             </Table>
                     }

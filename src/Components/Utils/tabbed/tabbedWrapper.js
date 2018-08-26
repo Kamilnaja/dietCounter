@@ -37,7 +37,7 @@ export default Component => {
                     active={this.state.active}
                     handleClick={this.handleClick}
                     renderTabs={this.renderTabs}
-                    items={this.props.items}
+                    {...this.props}
                 ></Component>
             );
         }
