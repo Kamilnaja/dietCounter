@@ -5,7 +5,7 @@ import All from './all/All';
 import Forbidden from './forbidden/Forbidden';
 import Permitted from './permitted/Permitted';
 
-const TabbedMeals = (props) => {
+const TabbedGoals = (props) => {
     return (
         <div className="tabbed">
             {props.renderTabs()}
@@ -33,10 +33,10 @@ const TabbedMeals = (props) => {
     );
 };
 
-TabbedMeals.propTypes = {
+TabbedGoals.propTypes = {
     active: PropTypes.string,
     items: PropTypes.array,
     renderTabs: PropTypes.func
 };
 
-export default tabbedWrapper(TabbedMeals);
+export default tabbedWrapper(TabbedGoals);

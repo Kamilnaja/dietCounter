@@ -6,10 +6,9 @@ class Tabbed extends Component {
         this.state = {
             active: 'lorem'
         };
-        this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(event) {
+    handleClick = (event) => {
         this.setState({
             active: event.target.innerHTML
         });

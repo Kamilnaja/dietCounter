@@ -21,10 +21,6 @@ export default Component => {
                 category: '',
                 showAddingForm: false,
             };
-            this.renderTable = this.renderTable.bind(this);
-            this.handleSubmit = this.handleSubmit.bind(this);
-            this.handleChange = this.handleChange.bind(this);
-            this.expandAddingForm = this.expandAddingForm.bind(this);
         }
 
         componentDidMount() {
@@ -42,7 +38,7 @@ export default Component => {
                 });
         }
 
-        handleChange(event, stateElem) {
+        handleChange = (event, stateElem) => {
             if (stateElem === 'name') {
                 this.setState({
                     name: event.target.value
@@ -58,7 +54,7 @@ export default Component => {
             }
         }
 
-        expandAddingForm() {
+        expandAddingForm = () => {
             this.setState({
                 showAddingForm: true
             });
@@ -68,7 +64,7 @@ export default Component => {
             });
         }
 
-        handleSubmit(event) {
+        handleSubmit = (event) => {
             event.preventDefault();
             var payload = {
                 name: this.state.name,
@@ -96,7 +92,7 @@ export default Component => {
             });
         }
 
-        renderTable() {
+        renderTable = () => {
             return (
                 <div className="tableWrapper">
                     <h2>

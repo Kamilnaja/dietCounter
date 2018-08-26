@@ -16,9 +16,11 @@ Frontend:
   ☐ on click expand and show more info
   ☐ make buttons works
   ☐ @bug  - application do not increment numbers of new items :(
-  ☐ reset form data after submit and hide input
-  ☐ @refactor - move input to new component
 Archive:
+  ✔ reset form data after submit and hide input @done(18-08-26 21:28) @project(Frontend)
+  ✔ @refactor - move input to new component @done(18-08-26 21:25) @project(Frontend)
+  ✔ @bug Why all do not have header? @done(18-08-26 21:28); @project(Frontend)
+  ✔ @refactor change functions to arrow, to remove .bind(this); @done(18-08-26 21:39) @project(Frontend)
   ✔ add + on the last column of table @done(18-08-26 14:49)
   ✔ for for adding eatems @today @done(18-08-25 16:53)
   ✔ add button for edit item @done(18-08-26 14:49)

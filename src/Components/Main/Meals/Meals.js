@@ -7,10 +7,9 @@ class Meals extends Component {
         this.state = {
             chosenItem: 'All'
         };
-        this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(e) {
+    handleClick = (e) => {
         this.setState({
             choosenItem: e.target.dataset.name
         });

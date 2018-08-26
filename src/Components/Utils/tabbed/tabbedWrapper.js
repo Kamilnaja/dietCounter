@@ -5,7 +5,6 @@ export default Component => {
 
         constructor(props) {
             super(props);
-            this.handleClick = this.handleClick.bind(this);
             this.state = { active: 'All' };
         }
 
@@ -24,7 +23,7 @@ export default Component => {
             </ul>;
         }
 
-        handleClick(event) {
+        handleClick = (event) => {
             event.preventDefault();
             this.setState({
                 active: event.target.innerHTML
