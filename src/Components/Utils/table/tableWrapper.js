@@ -5,6 +5,7 @@ import { Info } from './../../Utils/Info';
 
 /**
  * Wrapper for table element.
+ * 
  * Is responsible for every main action in table component
  * And his state
  */
