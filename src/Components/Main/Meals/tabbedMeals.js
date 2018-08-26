@@ -11,16 +11,16 @@ const TabbedMeals = (props) => {
             {props.renderTabs()}
             <div className="tabbedContent">
                 {
-                    props.active === 'All' && <All url='all' title="All items"></All>
+                    props.active === 'All' && <All url='all' rows={['id', 'name', 'kcal', 'category']}></All>
                 }
                 {
-                    props.active === 'Forbidden' && <Forbidden url='forbidden' title="Forbidden items"></Forbidden>
+                    props.active === 'Forbidden' && <Forbidden url='forbidden' title="Forbidden items" rows={['id', 'name', 'kcal', 'category']}></Forbidden>
                 }
                 {
-                    props.active === 'Permitted' && <Permitted url='permitted' title="Permitted items"></Permitted>
+                    props.active === 'Permitted' && <Permitted url='permitted' title="Permitted items" rows={['id', 'name', 'kcal', 'category']}></Permitted>
                 }
             </div>
-        </div>
+        </div >
     );
 };
 

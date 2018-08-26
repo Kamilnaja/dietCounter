@@ -6,7 +6,7 @@ class Table extends Component {
         super(props);
         this.handleClick = this.handleClick.bind(this);
         this.state = {
-            showAddingForm: false
+            showAddingForm: false,
         };
     }
 
@@ -18,6 +18,23 @@ class Table extends Component {
             top: 100000, // todo - scroll to bottom
             behavior: 'smooth'
         });
+    }
+
+    createRow(item) {
+        return (
+            this.props.rows.map((key, idx) => {
+                return <td key={idx}>{item[key]}</td>;
+            })
+        );
+    }
+
+    createActions() {
+        return (
+            <td>
+                <a href="">Edit</a>
+                <a href="">Remove</a>
+            </td>
+        );
     }
 
     render() {
@@ -39,28 +56,12 @@ class Table extends Component {
                 </thead>
                 <tbody>
                     {this.props.data.length === 0 ? 'loading' :
-                        this.props.data.map((item, idx) => <tr key={idx}>
-                            <td>
-                                {item.id}
-                            </td>
-                            <td>
-                                {item.name}
-                            </td>
-                            <td>
-                                {item.kcal}
-                            </td>
-                            <td>
-                                {item.category || 'unknown'}
-                            </td>
-                            <td>
-                                <a href="">
-                                    Edit
-                                </a>
-                                <a href="">
-                                    Remove
-                                </a>
-                            </td>
-                        </tr>
+                        this.props.data.map((item, idx) => (
+                            <tr key={idx}>
+                                {this.createRow(item)}
+                                {this.createActions(item)}
+                            </tr>
+                        )
                         )}
                     {
                         this.state.showAddingForm && (<tr>
@@ -82,7 +83,6 @@ class Table extends Component {
                             </td>
                         </tr>)
                     }
-
                 </tbody>
             </table>
         );
@@ -93,7 +93,8 @@ Table.propTypes = {
     data: PropTypes.array,
     headers: PropTypes.array,
     handleSubmit: PropTypes.func,
-    handleChange: PropTypes.func
+    handleChange: PropTypes.func,
+    rows: PropTypes.array
 };
 
 export default Table;

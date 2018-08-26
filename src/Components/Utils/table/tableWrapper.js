@@ -74,7 +74,6 @@ export default Component => {
                 .catch(error => console.error('Fetch Error =\n', error));
             this.setState({
                 showAddingForm: false,
-                items: [{ id: 1, name: 'dupa' }]
             });
         }
 
@@ -88,6 +87,7 @@ export default Component => {
                         this.state.items.length === 0 ? 'Loading'
                             : <Table
                                 headers={tableHeaders}
+                                rows={this.props.rows}
                                 data={this.state.items}
                                 handleSubmit={this.handleSubmit}
                                 handleChange={this.handleChange}
