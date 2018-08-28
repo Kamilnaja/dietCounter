@@ -16,6 +16,9 @@ Frontend:
   ☐ on click expand and show more info
   ☐ make buttons works
   ☐ @bug  - application do not increment numbers of new items :(
+  ☐ Add spread operator to states and other value @refactor
+  ✔ fix error @bug @done(18-08-28 20:38)
+  ☐ fix issue when shows form
 Archive:
   ✔ reset form data after submit and hide input @done(18-08-26 21:28) @project(Frontend)
   ✔ @refactor - move input to new component @done(18-08-26 21:25) @project(Frontend)
