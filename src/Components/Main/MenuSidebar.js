@@ -11,7 +11,7 @@ class MenuSidebar extends Component {
         };
     }
 
-    handleClick = (id) => {
+    handleClick = id => {
         this.setState({
             selected: id
         });
@@ -23,7 +23,7 @@ class MenuSidebar extends Component {
                 {
                     MenuItems.items.map((item, id) =>
                         <SingleMenus
-                            handleClick={() => this.handleClick(this, id)}
+                            handleClick={this.handleClick}
                             key={id}
                             id={id}
                             item={item}
