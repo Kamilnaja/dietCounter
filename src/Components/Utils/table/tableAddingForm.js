@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 
 class TableAddingForm extends Component {
     constructor(props) {
@@ -39,5 +40,13 @@ class TableAddingForm extends Component {
         );
     }
 }
+
+TableAddingForm.propTypes = {
+    handleChange: PropTypes.function,
+    handleSubmit: PropTypes.function,
+    name: PropTypes.string,
+    kcal: PropTypes.string,
+    category: PropTypes.string
+};
 
 export default TableAddingForm;

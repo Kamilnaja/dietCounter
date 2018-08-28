@@ -13,5 +13,6 @@ export function Info(props) {
 
 Info.propTypes = {
     children: PropTypes.string,
-    info: PropTypes.string
+    info: PropTypes.string,
+    type: PropTypes.string
 };
