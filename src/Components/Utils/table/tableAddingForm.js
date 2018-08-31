@@ -42,8 +42,8 @@ class TableAddingForm extends Component {
 }
 
 TableAddingForm.propTypes = {
-    handleChange: PropTypes.function,
-    handleSubmit: PropTypes.function,
+    handleChange: PropTypes.func,
+    handleSubmit: PropTypes.func,
     name: PropTypes.string,
     kcal: PropTypes.string,
     category: PropTypes.string

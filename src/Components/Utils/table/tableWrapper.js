@@ -5,7 +5,6 @@ import { Info } from './../../Utils/Info';
 
 /**
  * Wrapper for table element.
- * 
  * Is responsible for every main action in table component
  * And his state
  */
@@ -72,7 +71,7 @@ export default Component => {
                 category: this.state.category
             };
 
-            fetch('http://localhost:8080/addProduct', {
+            fetch('http://localhost:8080/product', {
                 method: 'POST',
                 body: JSON.stringify(payload),
                 headers: {
@@ -113,6 +112,10 @@ export default Component => {
                     }
                 </div>
             );
+        }
+
+        handleRemove() {
+
         }
 
         render() {

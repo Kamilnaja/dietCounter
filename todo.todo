@@ -19,6 +19,9 @@ Frontend:
   ☐ Add spread operator to states and other value @refactor
   ✔ fix error @bug @done(18-08-28 20:38)
   ☐ fix issue when shows form
+  ☐ add remove fn on frontend
+  Backend:
+    ☐ add remove fn on backend
 Archive:
   ✔ reset form data after submit and hide input @done(18-08-26 21:28) @project(Frontend)
   ✔ @refactor - move input to new component @done(18-08-26 21:25) @project(Frontend)

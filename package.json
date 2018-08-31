@@ -17,5 +17,8 @@
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "scriptPreprocessor": "node_modules/babel-jest"
   }
 }
