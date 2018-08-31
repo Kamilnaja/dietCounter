@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Diary from './Diary/Diary';
+import Goals from './Goals/Goals';
 import Meals from './Meals/Meals';
 import MenuSidebar from './MenuSidebar';
 
@@ -14,7 +14,7 @@ class App extends Component {
                     </div>
                     <Switch>
                         <Route path='/meals' component={Meals}></Route>
-                        <Route path='/diary' component={Diary}></Route>
+                        <Route path='/goals' component={Goals}></Route>
                     </Switch>
                 </div>
             </div >
