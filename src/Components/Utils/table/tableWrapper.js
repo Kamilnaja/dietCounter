@@ -101,7 +101,7 @@ export default Component => {
                     {
                         this.state.items.length === 0 ? 'Loading'
                             : <Table
-                                headers={tableHeaders}
+                                headers={this.props.rows}
                                 data={this.state.items}
                                 handleSubmit={this.handleSubmit}
                                 handleChange={this.handleChange}
