@@ -55,6 +55,14 @@ export default Component => {
             })
         }
 
+        handleRemove() {
+            console.log('remove')
+        }
+
+        handleEdit() {
+            console.log('todo - fix me ')
+        }
+
         expandAddingForm = () => {
             this.setState({
                 showAddingForm: true
@@ -103,6 +111,8 @@ export default Component => {
                                 handleSubmit={this.handleSubmit}
                                 handleChange={this.handleChange}
                                 handleCancel={this.handleCancel}
+                                handleRemove={this.handleRemove}
+                                handleEdit={this.handleEdit}
                                 expandAddingForm={this.expandAddingForm}
                                 showAddingForm={this.state.showAddingForm}
                                 {...this.props}
@@ -122,9 +132,6 @@ export default Component => {
             return payload;
         }
 
-        handleRemove() {
-
-        }
 
         render() {
             const { error } = this.state;

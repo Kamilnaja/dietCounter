@@ -17,11 +17,9 @@ class TableAddingForm extends Component {
                     this.props.formInputs.map((item, idx) =>
                         <td key={idx}>
                             <input
-                                type={item.type}
-                                placeholder={item.placeholder}
+                                {...item}
                                 value={this.state.name}
                                 onChange={this.props.handleChange}
-                                name={item.name}
                             />
                         </td>
                     )

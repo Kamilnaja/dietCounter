@@ -12,18 +12,21 @@ Frontend:
   ☐ add header above
   ☐ on click expand and show more info
   ☐ make buttons works [edit] and [delete]
-  ☐ fix issue when shows form @critical 
   ☐ add remove fn on frontend
   ☐ clear inputs after send
   ☐ items were to far away on big screen
   ☐ recreate table using divs
+  ☐ add border bottom to table items
   BUGS: 
     ☐ @bug  - application do not increment numbers of new items :(
-    ✔ cancel do not hide item @done(18-09-02 20:31)
 Design:
     ☐ after every goals, list the last days (if this is don e, or not)
     ☐ Detailed info, after go inside the goal
 Archive:
+  ✔ fix issue when shows form @critical @done(18-09-02 20:51) @project(Frontend)
+  ✔ tableWrapper - send props in other way @done(18-09-02 20:43) @project(Frontend)
+  ✔ set current goals as default @done(18-09-02 20:51) @project(Frontend)
+  ✔ cancel do not hide item @done(18-09-02 20:31) @project(Frontend.BUGS)
   ✔ @backend add url with slashes @done(18-09-02 18:33) @project(Frontend)
   ✔ error with saving numbers of kcals @done(18-09-02 18:35) @project(Frontend)
   ✔ add configuration when adding new items @done(18-09-02 18:31) @project(Frontend)
