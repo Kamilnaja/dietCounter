@@ -1,0 +1,17 @@
+[
+    {
+        "type": "text",
+        "placeholder": "name",
+        "name": "name"
+    },
+    {
+        "type": "number",
+        "placeholder": 1000,
+        "name": "content"
+    },
+    {
+        "type": "text",
+        "placeholder": "category",
+        "name": "category"
+    }
+]

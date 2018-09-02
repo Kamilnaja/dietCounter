@@ -36,11 +36,11 @@ class Table extends Component {
                         ))
                     }
                     {
-                        // this.props.showAddingForm && ( // todo - remove this comment
-                        <TableAddingForm
-                            {...this.props}
-                        ></TableAddingForm>
-                        // )
+                        this.props.showAddingForm && (
+                            <TableAddingForm
+                                {...this.props}
+                            ></TableAddingForm>
+                        )
                     }
                 </tbody>
             </table>

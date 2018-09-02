@@ -5,31 +5,8 @@ class TableAddingForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
-            formInputs: [
-                {
-                    id: 1,
-                    type: 'text',
-                    placeholder: 'name',
-                    name: 'name'
-                },
-                {
-                    id: 2,
-                    type: 'text',
-                    placeholder: 'kcal',
-                    name: 'kcal'
-                },
-                {
-                    id: 3,
-                    type: 'text',
-                    placeholder: 'category',
-                    name: 'category'
-                }
-            ]
         };
     }
-
-
 
     render() {
         return (
@@ -37,7 +14,7 @@ class TableAddingForm extends Component {
                 <td>
                 </td>
                 {
-                    this.state.formInputs.map((item, idx) =>
+                    this.props.formInputs.map((item, idx) =>
                         <td key={idx}>
                             <input
                                 type={item.type}
@@ -61,6 +38,7 @@ class TableAddingForm extends Component {
 TableAddingForm.propTypes = {
     handleChange: PropTypes.func,
     handleSubmit: PropTypes.func,
+    formInputs: PropTypes.array
 };
 
 export default TableAddingForm;

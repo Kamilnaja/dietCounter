@@ -4,6 +4,7 @@ import tabbedWrapper from '../../Utils/tabbed/tabbedWrapper';
 import All from './all/All';
 import Forbidden from './forbidden/Forbidden';
 import Permitted from './permitted/Permitted';
+import mealsInputs from './mealsInputs.json';
 
 const TabbedMeals = (props) => {
     return (
@@ -14,7 +15,9 @@ const TabbedMeals = (props) => {
                     props.active === 'All' && <All
                         url='all'
                         title="All items"
-                        rows={['id', 'name', 'kcal', 'category']}></All>
+                        rows={['id', 'name', 'kcal', 'category']}
+                        formInputs={mealsInputs}
+                    ></All>
                 }
                 {
                     props.active === 'Forbidden' && <Forbidden

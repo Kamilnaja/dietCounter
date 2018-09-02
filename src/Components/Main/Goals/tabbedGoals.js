@@ -3,6 +3,7 @@ import tabbedWrapper from '../../Utils/tabbed/tabbedWrapper';
 import { PropTypes } from 'prop-types';
 import GoalsCurrent from './current/GoalsCurrent';
 import GoalsNew from './new/GoalsNew';
+import goalsInputs from './goalsInputs.json';
 
 const TabbedGoals = (props) => {
     return (
@@ -10,11 +11,15 @@ const TabbedGoals = (props) => {
             {props.renderTabs()}
             <div className="tabbedContent">
                 {
-                    props.active === 'Current' && <GoalsCurrent
+                    props.active === 'Current' &&
+                    <GoalsCurrent
                         url='goals' // todo - change this
                         title='Current Goals'
                         rows={['id', 'name', 'content']}
-                    ></GoalsCurrent>}
+                        {...this.props}
+                        formInputs={goalsInputs}
+                    ></GoalsCurrent>
+                }
                 {
                     props.active === 'New' && <GoalsNew></GoalsNew>
                 }

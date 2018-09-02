@@ -11,7 +11,9 @@ class Goals extends Component {
 
     render() {
         return (
-            <TabbedGoals items={['Current', 'New', 'Old', 'All']} ></TabbedGoals >
+            <TabbedGoals
+                items={['Current', 'New', 'Old', 'All']}
+            ></TabbedGoals >
         );
     }
 }
