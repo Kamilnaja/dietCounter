@@ -55,8 +55,27 @@ export default Component => {
             })
         }
 
-        handleRemove() {
-            console.log('remove')
+        handleRemove = (event) => {
+            console.log(event.target.parentElement.id);
+            let payload = {
+                _id: event.target.parentElement.id
+            };
+
+            fetch(`${setup.api}/${this.props.url}`, {
+                method: 'DELETE',
+                body: JSON.stringify(payload),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(response => {
+                    this.setState({
+                        items: response
+                    })
+                })
+                .catch(error => console.error('Fetch Error =\n', error));
         }
 
         handleEdit() {

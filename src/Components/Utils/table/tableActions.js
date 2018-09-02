@@ -3,10 +3,10 @@ import { PropTypes } from 'prop-types';
 
 const TableActions = (props) => {
     return (
-        <td>
-            <button onClick={props.handleEdit}>Edit</button>
+        <td id={props.item._id}>
+            <button id={props.item._id} onClick={(e) => props.handleEdit(e)}>Edit</button>
             <button onClick={props.handleRemove} >Remove</button>
-        </td>
+        </td >
     );
 };
 

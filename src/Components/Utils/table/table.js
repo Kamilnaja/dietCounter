@@ -10,10 +10,7 @@ import TableHeader from './tableHeader';
  */
 
 class Table extends Component {
-    constructor(props) {
-        super(props);
-        debugger
-    }
+
     render() {
         return (
             <table className="table">
@@ -30,10 +27,12 @@ class Table extends Component {
                                     <React.Fragment>
                                         <TableBodyRow
                                             item={item}
-                                            {...this.props}>
+                                            rows={this.props.rows}>
                                         </TableBodyRow>
                                         <TableActions
-                                            {...this.props}
+                                            item={item}
+                                            handleRemove={this.props.handleRemove}
+                                            handleEdit={this.props.handleEdit}
                                         ></TableActions>
                                     </React.Fragment>
                                 }
@@ -60,6 +59,7 @@ Table.propTypes = {
     handleChange: PropTypes.func,
     handleRemove: PropTypes.func,
     handleCancel: PropTypes.func,
+    handleEdit: PropTypes.func,
     expandAddingForm: PropTypes.func,
     rows: PropTypes.array,
     showAddingForm: PropTypes.bool

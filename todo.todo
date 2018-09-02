@@ -17,8 +17,10 @@ Frontend:
   ☐ items were to far away on big screen
   ☐ recreate table using divs
   ☐ add border bottom to table items
+  
   BUGS: 
     ☐ @bug  - application do not increment numbers of new items :(
+    ☐ @bug - when api dont have any items, display at list empty table and possiblity to add something
 Design:
     ☐ after every goals, list the last days (if this is don e, or not)
     ☐ Detailed info, after go inside the goal
