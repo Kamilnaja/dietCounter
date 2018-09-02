@@ -13,6 +13,7 @@ class App extends Component {
                         <MenuSidebar></MenuSidebar>
                     </div>
                     <Switch>
+                        <Route path='/' exact component={Meals}></Route>
                         <Route path='/meals' component={Meals}></Route>
                         <Route path='/goals' component={Goals}></Route>
                     </Switch>

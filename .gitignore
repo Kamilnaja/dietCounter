@@ -22,3 +22,4 @@ yarn-error.log*
 .eslintrc.js
 .vscode/tasks.json
 .vscode
+debug.log

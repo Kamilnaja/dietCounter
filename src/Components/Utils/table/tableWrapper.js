@@ -1,6 +1,5 @@
 import React from 'react';
 import Table from './../../Utils//table/table';
-import tableHeaders from './../../../MealsTableHeaders';
 import { Info } from './../../Utils/Info';
 import setup from './../../Utils/setup.json';
 
