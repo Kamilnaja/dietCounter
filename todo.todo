@@ -16,11 +16,15 @@ Frontend:
   ☐ on click expand and show more info
   ☐ make buttons works
   ☐ @bug  - application do not increment numbers of new items :(
-  ☐ Add spread operator to states and other value @refactor
+  ✔ Add spread operator to states and other value @refactor @done(18-09-02 11:17)
   ☐ fix issue when shows form
   ☐ add remove fn on frontend
-  ☐ add tabs for goals
-  ☐ create setup for href
+  GOALS:
+    ✔ display data for current goals @done(18-09-02 11:43)
+    ✔ create setup for href @done(18-09-02 10:51)
+    ✔ add tabs for goals @done(18-09-02 11:16)
+    ☐ @bug - we dont wont see kcal 
+    ☐ @bug - doubled items in current goals
 Backend:
     ☐ 
 

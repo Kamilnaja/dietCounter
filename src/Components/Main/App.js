@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Goals from './Goals/Goals';
 import Meals from './Meals/Meals';
-import MenuSidebar from './MenuSidebar';
+import MenuSidebar from './Menu/MenuSidebar';
 
 class App extends Component {
     render() {
