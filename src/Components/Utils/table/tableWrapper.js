@@ -63,7 +63,7 @@ export default Component => {
             // iterate through data 
             var payload = this.makePayloadFromAllInputs();
 
-            fetch(`${setup.api}/product`, {
+            fetch(`${setup.api}/${this.props.url}`, {
                 method: 'POST',
                 body: JSON.stringify(payload),
                 headers: {

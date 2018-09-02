@@ -14,22 +14,23 @@ Frontend:
   ☐ make buttons works [edit] and [delete]
   ☐ fix issue when shows form
   ☐ add remove fn on frontend
-  ☐ configure input
-  ✔ add files to gitignore @done(18-09-02 15:10)
   BUGS: 
-    ✔ create better input - one for all components @done(18-09-02 16:37)
     ☐ @bug  - application do not increment numbers of new items :(
-    ✔ fix bug with the payload @done(18-09-02 16:37)
-    ☐ current goals have wrong input elements
-  GOALS:
-    ☐ 
-Backend:
-    ☐ 
-
 Design:
     ☐ after every goals, list the last days (if this is don e, or not)
     ☐ Detailed info, after go inside the goal
 Archive:
+  ✔ @backend add url with slashes @done(18-09-02 18:33) @project(Frontend)
+  ✔ error with saving numbers of kcals @done(18-09-02 18:35) @project(Frontend)
+  ✔ add configuration when adding new items @done(18-09-02 18:31) @project(Frontend)
+  ✔ when added new goals, page moves us to wrong subpage @done(18-09-02 18:31) @project(Frontend.BUGS)
+  ✔ test new endpoint @started(18-09-02 18:21) @done(18-09-02 18:23) @lasted(2m29s) @project(Frontend.BACKEND)
+  ✔ configure input @done(18-09-02 17:40) @project(Frontend)
+  ✔ Add entrypoint for add goal @started(18-09-02 18:16) @done(18-09-02 18:20) @lasted(4m50s) @project(Backend)
+  ✔ add files to gitignore @done(18-09-02 15:10) @project(Frontend)
+  ✔ create better input - one for all components @done(18-09-02 16:37) @project(Frontend.BUGS)
+  ✔ fix bug with the payload @done(18-09-02 16:37) @project(Frontend.BUGS)
+  ✔ current goals have wrong input elements @done(18-09-02 17:36) @project(Frontend.BUGS)
   ✔ As a user, you can add next meal to list @done(18-09-02 13:23) @project(Frontend)
   ✔ change components without state into functional @done(18-09-02 13:23) @project(Frontend)
   ✔ check RWD @done(18-09-02 13:23) @project(Frontend)

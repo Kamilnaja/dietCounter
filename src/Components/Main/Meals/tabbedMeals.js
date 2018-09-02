@@ -13,7 +13,7 @@ const TabbedMeals = (props) => {
             <div className="tabbedContent">
                 {
                     props.active === 'All' && <All
-                        url='all'
+                        url='product'
                         title="All items"
                         rows={['id', 'name', 'kcal', 'category']}
                         formInputs={mealsInputs}
@@ -21,13 +21,13 @@ const TabbedMeals = (props) => {
                 }
                 {
                     props.active === 'Forbidden' && <Forbidden
-                        url='forbidden'
+                        url='product/forbidden'
                         title="Forbidden items"
                         rows={['id', 'name', 'kcal', 'category']}></Forbidden>
                 }
                 {
                     props.active === 'Permitted' && <Permitted
-                        url='permitted'
+                        url='product/permitted'
                         title="Permitted items"
                         rows={['id', 'name', 'kcal', 'category']}></Permitted>
                 }
