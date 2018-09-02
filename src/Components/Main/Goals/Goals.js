@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Info } from '../../Utils/Info';
+import setup from './../../Utils/setup.json';
 
 class Goals extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class Goals extends Component {
     }
 
     componentDidMount = () => {
-        fetch(`http://localhost:8080/goals`)
+        fetch(`${setup.localHref}/goals`)
             .then(res => { return res.json() })
             .then(res => {
                 this.setState({

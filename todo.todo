@@ -19,15 +19,18 @@ Frontend:
   ☐ Add spread operator to states and other value @refactor
   ☐ fix issue when shows form
   ☐ add remove fn on frontend
-  ☐ get tasks from api
+  ☐ add tabs for goals
+  ☐ create setup for href
 Backend:
-    ✔ add remove fn on backend @done(18-08-31 21:05)
-    ✔ serve tasks list from db @done(18-08-31 21:05)
+    ☐ 
 
 Design:
-    ☐ after every goals, list the last days (if this is done, or not)
+    ☐ after every goals, list the last days (if this is don e, or not)
     ☐ Detailed info, after go inside the goal
 Archive:
+  ✔ get tasks from api @done(18-09-02 10:40) @project(Frontend)
+  ✔ add remove fn on backend @done(18-08-31 21:05) @project(Backend)
+  ✔ serve tasks list from db @done(18-08-31 21:05) @project(Backend)
   ✔ fix error @bug @done(18-08-28 20:38) @project(Frontend)
   ✔ reset form data after submit and hide input @done(18-08-26 21:28) @project(Frontend)
   ✔ @refactor - move input to new component @done(18-08-26 21:25) @project(Frontend)

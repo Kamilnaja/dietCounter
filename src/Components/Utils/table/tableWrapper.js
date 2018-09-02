@@ -2,6 +2,7 @@ import React from 'react';
 import Table from './../../Utils//table/table';
 import tableHeaders from './../../../MealsTableHeaders';
 import { Info } from './../../Utils/Info';
+import setup from './../../Utils/setup.json';
 
 /**
  * Wrapper for table element.
@@ -23,7 +24,7 @@ export default Component => {
         }
 
         componentDidMount() {
-            fetch(`http://localhost:8080/${this.props.url}`)
+            fetch(`${setup.api}/${this.props.url}`)
                 .then(res => { return res.json(); })
                 .then(result => {
                     this.setState({
@@ -71,7 +72,7 @@ export default Component => {
                 category: this.state.category
             };
 
-            fetch('http://localhost:8080/product', {
+            fetch(`${setup.api}/product`, {
                 method: 'POST',
                 body: JSON.stringify(payload),
                 headers: {
