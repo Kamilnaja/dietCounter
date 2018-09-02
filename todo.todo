@@ -1,5 +1,5 @@
 Frontend:
-  ☐ As a user, you can add next meal to list
+  ✔ As a user, you can add next meal to list @done(18-09-02 13:23)
   ☐ Add hamburger menu
   ☐ as a user, you can add category to list of categories
   ☐ menu posiłki zagnieżdżone w dziennik w bocznym menu
@@ -10,21 +10,24 @@ Frontend:
   ☐ scripting  for mongo
   ☐ add info about category
   ☐ display data from diary
-  ☐ change components without state into functional
-  ☐ check RWD
+  ✔ change components without state into functional @done(18-09-02 13:23)
+  ✔ check RWD @done(18-09-02 13:23)
   ☐ add header above
   ☐ on click expand and show more info
-  ☐ make buttons works
+  ☐ make buttons works [edit] and [delete]
   ☐ @bug  - application do not increment numbers of new items :(
   ✔ Add spread operator to states and other value @refactor @done(18-09-02 11:17)
   ☐ fix issue when shows form
   ☐ add remove fn on frontend
+  ☐ configure input
+  ☐ change headers and rows to one thing
   GOALS:
     ✔ display data for current goals @done(18-09-02 11:43)
     ✔ create setup for href @done(18-09-02 10:51)
     ✔ add tabs for goals @done(18-09-02 11:16)
     ✔ @bug - we dont wont see kcal @done(18-09-02 13:16)
-    ☐ @bug - doubled items in current goals
+    ✔ @bug - doubled items in current goals @done(18-09-02 13:19)
+    ☐ 
 Backend:
     ☐ 
 

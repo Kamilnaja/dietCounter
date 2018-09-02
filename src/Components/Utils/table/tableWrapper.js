@@ -16,9 +16,9 @@ export default Component => {
             super(props);
             this.state = {
                 items: [],
-                name: '',
-                kcal: '',
-                category: '',
+                // name: '',
+                // kcal: '',
+                // category: '',
                 showAddingForm: false,
             };
         }
@@ -101,7 +101,6 @@ export default Component => {
                     {
                         this.state.items.length === 0 ? 'Loading'
                             : <Table
-                                headers={this.props.rows}
                                 data={this.state.items}
                                 handleSubmit={this.handleSubmit}
                                 handleChange={this.handleChange}

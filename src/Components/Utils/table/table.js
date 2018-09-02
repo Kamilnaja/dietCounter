@@ -3,6 +3,7 @@ import { PropTypes } from 'prop-types';
 import TableBodyRow from './tableBodyRow';
 import TableAddingForm from './tableAddingForm';
 import TableActions from './tableActions';
+import TableHeader from './tableHeader';
 
 /**
  * This is table component, for <b>displaying</b> data.
@@ -14,24 +15,11 @@ class Table extends Component {
     render() {
         return (
             <table className="table">
-                <thead>
-                    <tr>
-                        <td>
-                            <button onClick={this.props.expandAddingForm}>
-                                +
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        {
-                            this.props.headers.map((item, idx) => (
-                                <td key={idx}>
-                                    {item}
-                                </td>
-                            ))
-                        }
-                    </tr>
-                </thead>
+                <TableHeader
+                    expandAddingForm={this.props.expandAddingForm}
+                    rows={this.props.rows}
+                >
+                </TableHeader>
                 <tbody>
                     {this.props.data.length === 0 ? 'loading' :
                         this.props.data.map((item, idx) => (
