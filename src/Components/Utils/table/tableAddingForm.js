@@ -28,7 +28,7 @@ class TableAddingForm extends Component {
                 }
                 <td>
                     <button onClick={(e) => this.props.handleSubmit(e)}>Save</button>
-                    <button>Cancel</button>
+                    <button onClick={this.props.handleCancel}>Cancel</button>
                 </td>
             </tr>
         );
@@ -38,7 +38,8 @@ class TableAddingForm extends Component {
 TableAddingForm.propTypes = {
     handleChange: PropTypes.func,
     handleSubmit: PropTypes.func,
-    formInputs: PropTypes.array
+    formInputs: PropTypes.array,
+    handleCancel: PropTypes.func.isRequired
 };
 
 export default TableAddingForm;

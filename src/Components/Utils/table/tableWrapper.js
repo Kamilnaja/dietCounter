@@ -21,6 +21,7 @@ export default Component => {
             };
             this.handleChange = this.handleChange.bind(this);
             this.handleSubmit = this.handleSubmit.bind(this);
+            this.handleCancel = this.handleCancel.bind(this);
         }
 
         componentDidMount() {
@@ -46,6 +47,12 @@ export default Component => {
             this.setState({
                 [name]: value
             });
+        }
+
+        handleCancel() {
+            this.setState({
+                showAddingForm: false
+            })
         }
 
         expandAddingForm = () => {
@@ -95,6 +102,7 @@ export default Component => {
                                 data={this.state.items}
                                 handleSubmit={this.handleSubmit}
                                 handleChange={this.handleChange}
+                                handleCancel={this.handleCancel}
                                 expandAddingForm={this.expandAddingForm}
                                 showAddingForm={this.state.showAddingForm}
                                 {...this.props}

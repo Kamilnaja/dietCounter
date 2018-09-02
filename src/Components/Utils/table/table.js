@@ -56,6 +56,7 @@ Table.propTypes = {
     rows: PropTypes.array,
     expandAddingForm: PropTypes.func,
     showAddingForm: PropTypes.bool,
+    handleCancel: PropTypes.func
 };
 
 export default Table;

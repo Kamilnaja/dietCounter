@@ -127,9 +127,23 @@ h2 {
     width: 50px;
 }
 
-.table input {
-    width: 50%;
+.tableLastTd {
+    display: flex;
 }
+
+.table input {
+    width: calc(100% - 10px);
+}
+
+@media(max-width: 1022px) {
+    .table tbody td:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+
 
 .table tr {
     height: 30px;
