@@ -12,13 +12,15 @@ Frontend:
   ☐ add header above
   ☐ on click expand and show more info
   ☐ make buttons works [edit] and [delete]
-  ☐ @bug  - application do not increment numbers of new items :(
   ☐ fix issue when shows form
   ☐ add remove fn on frontend
   ☐ configure input
-  ☐ add files to gitignore
+  ✔ add files to gitignore @done(18-09-02 15:10)
   BUGS: 
-    ☐ 
+    ✔ create better input - one for all components @done(18-09-02 16:37)
+    ☐ @bug  - application do not increment numbers of new items :(
+    ✔ fix bug with the payload @done(18-09-02 16:37)
+    ☐ current goals have wrong input elements
   GOALS:
     ☐ 
 Backend:

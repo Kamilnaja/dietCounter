@@ -7,6 +7,7 @@ import setup from './../../Utils/setup.json';
  * Wrapper for table element.
  * Is responsible for every main action in table component
  * And his state
+ * Contains root actions
  */
 
 export default Component => {
@@ -15,11 +16,11 @@ export default Component => {
             super(props);
             this.state = {
                 items: [],
-                // name: '',
-                // kcal: '',
-                // category: '',
                 showAddingForm: false,
+                payload: undefined
             };
+            this.handleChange = this.handleChange.bind(this);
+            this.handleSubmit = this.handleSubmit.bind(this);
         }
 
         componentDidMount() {
@@ -37,20 +38,14 @@ export default Component => {
                 });
         }
 
-        handleChange = (event, stateElem) => {
-            if (stateElem === 'name') {
-                this.setState({
-                    name: event.target.value
-                });
-            } else if (stateElem === 'kcal') {
-                this.setState({
-                    kcal: event.target.value
-                });
-            } else if (stateElem === 'category') {
-                this.setState({
-                    category: event.target.value
-                });
-            }
+        handleChange(event) {
+            const target = event.target;
+            const value = target.value;
+            const name = target.name;
+
+            this.setState({
+                [name]: value
+            });
         }
 
         expandAddingForm = () => {
@@ -65,11 +60,8 @@ export default Component => {
 
         handleSubmit = (event) => {
             event.preventDefault();
-            var payload = {
-                name: this.state.name,
-                kcal: parseInt(this.state.kcal, 10),
-                category: this.state.category
-            };
+            // iterate through data 
+            var payload = this.makePayloadFromAllInputs();
 
             fetch(`${setup.api}/product`, {
                 method: 'POST',
@@ -111,6 +103,15 @@ export default Component => {
                     }
                 </div>
             );
+        }
+
+        makePayloadFromAllInputs() {
+            var payload = {};
+            // starting from 1, because we dont need id
+            for (let i = 1; i < this.props.rows.length; i++) {
+                payload[this.props.rows[i]] = this.state[this.props.rows[i]];
+            }
+            return payload;
         }
 
         handleRemove() {

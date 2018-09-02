@@ -4,34 +4,51 @@ import { PropTypes } from 'prop-types';
 class TableAddingForm extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+
+            formInputs: [
+                {
+                    id: 1,
+                    type: 'text',
+                    placeholder: 'name',
+                    name: 'name'
+                },
+                {
+                    id: 2,
+                    type: 'text',
+                    placeholder: 'kcal',
+                    name: 'kcal'
+                },
+                {
+                    id: 3,
+                    type: 'text',
+                    placeholder: 'category',
+                    name: 'category'
+                }
+            ]
+        };
     }
+
+
 
     render() {
         return (
             <tr className='tableInputRow'>
                 <td>
                 </td>
-                <td>
-                    <input
-                        type="text"
-                        placeholder="name"
-                        value={this.props.name}
-                        onChange={(e) => this.props.handleChange(e, 'name')} />
-                </td>
-                <td>
-                    <input type="text"
-                        placeholder="kcal"
-                        value={this.props.kcal}
-                        onChange={(e) => this.props.handleChange(e, 'kcal')} />
-                </td>
-                <td>
-                    <input
-                        type="text"
-                        placeholder="category"
-                        value={this.props.category}
-                        onChange={(e) => this.props.handleChange(e, 'category')} />
-                </td>
+                {
+                    this.state.formInputs.map((item, idx) =>
+                        <td key={idx}>
+                            <input
+                                type={item.type}
+                                placeholder={item.placeholder}
+                                value={this.state.name}
+                                onChange={this.props.handleChange}
+                                name={item.name}
+                            />
+                        </td>
+                    )
+                }
                 <td>
                     <button onClick={(e) => this.props.handleSubmit(e)}>Save</button>
                     <button>Cancel</button>
@@ -44,9 +61,6 @@ class TableAddingForm extends Component {
 TableAddingForm.propTypes = {
     handleChange: PropTypes.func,
     handleSubmit: PropTypes.func,
-    name: PropTypes.string,
-    kcal: PropTypes.string,
-    category: PropTypes.string
 };
 
 export default TableAddingForm;

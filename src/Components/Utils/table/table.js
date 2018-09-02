@@ -7,7 +7,6 @@ import TableHeader from './tableHeader';
 
 /**
  * This is table component, for <b>displaying</b> data.
- * 
  */
 
 class Table extends Component {
@@ -34,15 +33,14 @@ class Table extends Component {
                                     </React.Fragment>
                                 }
                             </tr>
-                        )
-                        )
+                        ))
                     }
                     {
-                        this.props.showAddingForm && (
-                            <TableAddingForm
-                                {...this.props}
-                            ></TableAddingForm>
-                        )
+                        // this.props.showAddingForm && ( // todo - remove this comment
+                        <TableAddingForm
+                            {...this.props}
+                        ></TableAddingForm>
+                        // )
                     }
                 </tbody>
             </table>
@@ -58,9 +56,6 @@ Table.propTypes = {
     rows: PropTypes.array,
     expandAddingForm: PropTypes.func,
     showAddingForm: PropTypes.bool,
-    name: PropTypes.string,
-    kcal: PropTypes.number,
-    category: PropTypes.string,
 };
 
 export default Table;
