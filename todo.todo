@@ -12,12 +12,12 @@ Frontend:
   ☐ add header above
   ☐ on click expand and show more info
   ☐ make buttons works [edit] and [delete]
-  ☐ add remove fn on frontend
   ☐ clear inputs after send
   ☐ items were to far away on big screen
   ☐ recreate table using divs
   ☐ add border bottom to table items
-  
+  ☐ add edit fn
+  ☐ start adding animations 
   BUGS: 
     ☐ @bug  - application do not increment numbers of new items :(
     ☐ @bug - when api dont have any items, display at list empty table and possiblity to add something
@@ -25,6 +25,7 @@ Design:
     ☐ after every goals, list the last days (if this is don e, or not)
     ☐ Detailed info, after go inside the goal
 Archive:
+  ✔ add remove fn on frontend @done(18-09-02 22:27) @project(Frontend)
   ✔ fix issue when shows form @critical @done(18-09-02 20:51) @project(Frontend)
   ✔ tableWrapper - send props in other way @done(18-09-02 20:43) @project(Frontend)
   ✔ set current goals as default @done(18-09-02 20:51) @project(Frontend)
